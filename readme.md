@@ -62,7 +62,7 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
         k6 run performance/scripts/main_test.js
 
 
-# 2. Web Automation (Playwright) ozellikleri #
+# 2. Web Automation (Playwright) #
     Cross-Browser Testing: Chromium ve Firefox uzerinde paralel kosum destegi.
 
     Page Object Model (POM): Surdurulebilir ve moduler kod yapisi.
@@ -151,64 +151,40 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
     5. Native Shadow DOM ve iframe Destegi
     Modern web bilesenleri (Shadow DOM) ve karmasik iframe yapilari ile calisirken ek bir konfigurasyona ihtiyac duymadan dogrudan erisim saglar.
 
-# 3. API Test Automation Case Study - Restful Booker #
+# 3. API Test - Restful Booker #
 
-## 🛠 Kullanılan Teknolojiler
- Framework: Playwright Test (Modern & High-Performance API Testing)
+## 3. 1. Postman & Newman 
+Restful-booker API üzerindeki 9 temel senaryo, bağımlı test zinciri (request chaining) mantığıyla kurgulanmıştır.
 
-    Dil: TypeScript (Type Safety & Maintainability)
+Klasör Yolu: api-tests/postman/
 
-    Raporlama: Allure Report (Advanced Visual Analytics)
+Kullanılan Araçlar: Postman, Newman, JavaScript
 
-    Runtime: Node.js
+Test Kapsamı: Auth (Token generation), CRUD işlemleri (Create, Get, Update, Delete) ve Negatif senaryolar (403 Forbidden, 404 Not Found doğrulama).
 
-### Test Kapsamı ve Senaryolar
+🛠️ Çalıştırma Talimatı
+Projenin ana dizininde aşağıdaki komutu çalıştırarak tüm API testlerini terminal üzerinden koşturabilirsiniz:
 
-CRUD döngüsü dinamik veri akışıyla (Data-Driven) yönetilmektedir:
-    
-    ID	Method	Endpoint	Senaryo Açıklaması	Doğrulama (Assertion)
-    TC-001	POST	/auth	Geçerli kimlik bilgileri ile erişim	200 OK & Token Üretimi
-    TC-002	POST	/auth	Hatalı şifre denemesi	'Bad credentials' Mesajı
-    TC-003	GET	/booking	Tüm rezervasyonları listeleme	Dizi formatı & Yanıt < 1s
-    TC-006	POST	/booking	Yeni rezervasyon oluşturma	200 OK & ID Kaydı
-    TC-004	GET	/booking/:id	Oluşturulan ID ile detay sorgusu	Veri Bütünlüğü Kontrolü
-    TC-005	GET	/booking/:id	Olmayan ID ile sorgu	404 Not Found
-    TC-007	PUT	/booking/:id	Rezervasyon güncelleme (Auth)	Önce/Sonra Veri Kıyaslaması
-    TC-009	DELETE	/booking/:id	Yetkisiz silme denemesi	403 Forbidden
-    TC-008	DELETE	/booking/:id	Rezervasyonu kalıcı silme	201 Created & 404 İspatı
-    
-#### 🚀 Kurulum ve Çalıştırma
-        1. Bağımlılıkları Yükleyin
+Bash
+npm run test:api
+(Bu komut arka planda newman run api-tests/postman/postman_collection.json -e api-tests/postman/postman_environment.json komutunu tetikler.)
 
-        Bash
-        npm install
+## 3.2. Playwright & TypeScript 
+Teknik yetkinlik göstergesi olarak, aynı senaryolar modern bir framework olan Playwright ile de kodlanmıştır.
 
-        2. Testleri Koşturun
+Klasör Yolu: api-tests/rest_assured_playwright/
 
-        Bash
-        npx playwright test
+Öne Çıkan Özellikler:
 
-        3. Allure Raporunu Açın (Görsel İspat)
+TypeScript ile tip güvenliği.
 
-        Test sonuçlarını, karşılaştırmalı verileri ve API yanıtlarını detaylı görmek için:
+Allure Report entegrasyonu ile görsel raporlama.
 
-        Bash
-        npx allure serve reports/allure-results
+Chain of Requests mimarisi.
 
-##### 💎 Neden Playwright & TypeScript? (Senior Yaklaşımı)
-    Maintainability: Postman koleksiyonlarının aksine, kod tabanlı testler Git üzerinde kolayca versiyonlanabilir ve "Code Review" süreçlerine uygundur.
+🛠️ Çalıştırma ve Raporlama
+Testleri koşturmak ve görsel raporu açmak için rest_assured_playwright klasörü içerisinde:
 
-    State Comparison: TC-007 senaryosunda, verinin güncelleme öncesi ve sonrası hali raporda karşılaştırmalı olarak sunulur.
-
-    Audit Logs: Allure raporuna eklenen Attachment özelliği sayesinde her testin ham API yanıtı (JSON) incelenebilir.
-
-    Shift-Left Testing: Proje, herhangi bir CI/CD hattına (Jenkins, GitHub Actions vb.) entegre edilmeye hazır mimariye sahiptir.
-
-###### 📁 Proje Klasör Yapısı
-    tests/: API test senaryoları (.spec.ts)
-
-    reports/: Allure sonuçlarının depolandığı alan.
-
-    test-results/: Hata durumunda oluşan izleme (Trace) kayıtları.
-
-    playwright.config.ts: BaseURL, Zaman aşımı ve Reporter ayarları.
+Bash
+npx playwright test
+npx allure serve reports/allure-results
