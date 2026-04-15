@@ -150,3 +150,65 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
 
     5. Native Shadow DOM ve iframe Destegi
     Modern web bilesenleri (Shadow DOM) ve karmasik iframe yapilari ile calisirken ek bir konfigurasyona ihtiyac duymadan dogrudan erisim saglar.
+
+# 3. API Test Automation Case Study - Restful Booker #
+
+## 🛠 Kullanılan Teknolojiler
+ Framework: Playwright Test (Modern & High-Performance API Testing)
+
+    Dil: TypeScript (Type Safety & Maintainability)
+
+    Raporlama: Allure Report (Advanced Visual Analytics)
+
+    Runtime: Node.js
+
+### Test Kapsamı ve Senaryolar
+
+CRUD döngüsü dinamik veri akışıyla (Data-Driven) yönetilmektedir:
+    
+    ID	Method	Endpoint	Senaryo Açıklaması	Doğrulama (Assertion)
+    TC-001	POST	/auth	Geçerli kimlik bilgileri ile erişim	200 OK & Token Üretimi
+    TC-002	POST	/auth	Hatalı şifre denemesi	'Bad credentials' Mesajı
+    TC-003	GET	/booking	Tüm rezervasyonları listeleme	Dizi formatı & Yanıt < 1s
+    TC-006	POST	/booking	Yeni rezervasyon oluşturma	200 OK & ID Kaydı
+    TC-004	GET	/booking/:id	Oluşturulan ID ile detay sorgusu	Veri Bütünlüğü Kontrolü
+    TC-005	GET	/booking/:id	Olmayan ID ile sorgu	404 Not Found
+    TC-007	PUT	/booking/:id	Rezervasyon güncelleme (Auth)	Önce/Sonra Veri Kıyaslaması
+    TC-009	DELETE	/booking/:id	Yetkisiz silme denemesi	403 Forbidden
+    TC-008	DELETE	/booking/:id	Rezervasyonu kalıcı silme	201 Created & 404 İspatı
+    
+#### 🚀 Kurulum ve Çalıştırma
+        1. Bağımlılıkları Yükleyin
+
+        Bash
+        npm install
+
+        2. Testleri Koşturun
+
+        Bash
+        npx playwright test
+
+        3. Allure Raporunu Açın (Görsel İspat)
+
+        Test sonuçlarını, karşılaştırmalı verileri ve API yanıtlarını detaylı görmek için:
+
+        Bash
+        npx allure serve reports/allure-results
+
+##### 💎 Neden Playwright & TypeScript? (Senior Yaklaşımı)
+    Maintainability: Postman koleksiyonlarının aksine, kod tabanlı testler Git üzerinde kolayca versiyonlanabilir ve "Code Review" süreçlerine uygundur.
+
+    State Comparison: TC-007 senaryosunda, verinin güncelleme öncesi ve sonrası hali raporda karşılaştırmalı olarak sunulur.
+
+    Audit Logs: Allure raporuna eklenen Attachment özelliği sayesinde her testin ham API yanıtı (JSON) incelenebilir.
+
+    Shift-Left Testing: Proje, herhangi bir CI/CD hattına (Jenkins, GitHub Actions vb.) entegre edilmeye hazır mimariye sahiptir.
+
+###### 📁 Proje Klasör Yapısı
+    tests/: API test senaryoları (.spec.ts)
+
+    reports/: Allure sonuçlarının depolandığı alan.
+
+    test-results/: Hata durumunda oluşan izleme (Trace) kayıtları.
+
+    playwright.config.ts: BaseURL, Zaman aşımı ve Reporter ayarları.
