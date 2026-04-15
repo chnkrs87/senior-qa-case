@@ -7,37 +7,29 @@ on:
 
 jobs:
   test:
-    timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: 'npm'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: automation/package-lock.json
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: cd automation && npm install
 
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
+      - name: Install Playwright Browsers
+        run: cd automation && npx playwright install --with-deps
 
-    - name: Run Playwright tests
-      run: npx playwright test
+      - name: Run Playwright tests
+        run: cd automation && npx playwright test
 
-    - name: Upload Custom Screenshots
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: playwight-screenshots
-        path: test-results/
-        retention-days: 7
-
-    - name: Upload Allure Results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: allure-results
-        path: reports/allure-results/
-        retention-days: 7
+      - name: Upload Custom Screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: manual-screenshots
+          path: automation/test-results/
+          retention-days: 7
