@@ -1,67 +1,134 @@
 # 🚀 Senior QA Engineering Case Study
 
-## 📂 Proje Yapısı
+## 📂 Proje Yapisi
 
-- **`api-tests/`**: API koleksiyonları ve dokümantasyonu.
-- **`automation/`**: Web/API otomasyon çalışmaları (varsa).
-- **`mobile/`**: Mobil uygulama test notları ve cihaz spesifik gözlemler.
-- **`performance/`**: k6 performans scriptleri ve detaylı raporlar.
-- **`test-cases/`**: Manuel test senaryoları ve Markdown formatında Bug Raporları.
+- **`api-tests/`**: API koleksiyonlari ve dokumantasyonu.
+- **`automation/`**: Web/API otomasyon calismalari (varsa).
+- **`mobile/`**: Mobil uygulama test notlari ve cihaz spesifik gozlemler.
+- **`performance/`**: k6 performans scriptleri ve detayli raporlar.
+- **`test-cases/`**: Manuel test senaryolari ve Markdown formatinda Bug Raporlari.
 
 # Performans Test #
 
 ## 📊 Performans Test Analizi
 
-Sistemin dayanıklılığını ölçmek için 4 aşamalı bir iş yükü modeli (Workload Model) uygulanmıştır.
+Sistemin dayanikliligini olcmek icin 4 asamali bir is yuku modeli (Workload Model) uygulanmistir.
 
-### ⚙️ Test Senaryoları ve Hedefler
+### ⚙️ Test Senaryolari ve Hedefler
 
-| Test Türü | Yük (VU) | Süre | Amaç | Sonuç |
+| Test Turu | Yuk (VU) | Sure | Amac | Sonuc |
 | :--- | :---: | :---: | :--- | :--- |
-| **Load Test** | 50 | 5m | Normal trafik altında baz performans ölçümü. | ✅ Başarılı |
-| **Stress Test** | 200 | 10m | Sistemin sınır değerlerini ve darboğazlarını tespit. | ✅ Başarılı |
-| **Spike Test** | 0→500→0 | 3m | Ani trafik şoklarına karşı esneklik ve toparlanma. | ⚠️ Risk Tespit Edildi |
-| **Soak Test** | 30 | 30m | Uzun süreli yük altında stabilite ve bellek sızıntısı. | ❌ Stabilite Sorunu |
+| **Load Test** | 50 | 5m | Normal trafik altinda baz performans olcumu. | ✅ Basarili |
+| **Stress Test** | 200 | 10m | Sistemin sinir degerlerini ve darbogazlarini tespit. | ✅ Basarili |
+| **Spike Test** | 0→500→0 | 3m | Ani trafik soklarina karsi esneklik ve toparlanma. | ⚠️ Risk Tespit Edildi |
+| **Soak Test** | 30 | 30m | Uzun sureli yuk altinda stabilite ve bellek sizintisi. | ❌ Stabilite Sorunu |
 
-### 📈 Görsel Raporlar
+### 📈 Gorsel Raporlar
 
-#### 1. Genel Metrikler ve SLA Uyumluluğu
-Sistem ortalama **107.10 ms** yanıt süresi ile 2000ms olan SLA hedefinin çok altında kalarak yüksek hızda performans sergilemiştir.
+#### 1. Genel Metrikler ve SLA Uyumlulugu
+Sistem ortalama **107.10 ms** yanit suresi ile 2000ms olan SLA hedefinin cok altinda kalarak yuksek hizda performans sergilemistir.
 ![Performans Metrikleri](performance/results/screenshots/report-001.png)
 
-#### 2. Test Yürütme Detayları (Throughput)
-Saniyede ortalama **128.39** istek işlenmiş, toplamda ~370 bin istek başarıyla yönetilmiştir.
-![Test Detayları](performance/results/screenshots/report-002.png)
+#### 2. Test Yurutme Detaylari (Throughput)
+Saniyede ortalama **128.39** istek islenmis, toplamda ~370 bin istek basariyla yonetilmistir.
+![Test Detaylari](performance/results/screenshots/report-002.png)
 
-#### 3. Başarı Oranları (Checks)
-Toplam başarı oranı **%99.29** olarak gerçekleşmiştir. 1,315 adet hata Spike fazında gözlemlenmiştir.
-![Doğrulama Sonuçları](performance/results/screenshots/report-003.png)
+#### 3. Basari Oranlari (Checks)
+Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike fazinda gozlemlenmistir.
+![Dogrulama Sonuclari](performance/results/screenshots/report-003.png)
 
-## 🔍 Teknik Gözlemler ve Analiz (Senior Perspective)
+## 🔍 Teknik Gozlemler ve Analiz (Senior Perspective)
 
-1. **Breaking Point:** Sistem 200 VU (Stress) seviyesine kadar kusursuz çalışmaktadır. Ancak 500 VU (Spike) anında TCP bağlantı hataları (`connectex`) üretmeye başlamıştır.
-2. **Recovery Failure:** Spike testi sonrasında yük 30 VU seviyesine (Soak) düşürülmesine rağmen hataların devam ettiği gözlemlenmiştir. Bu durum, sistemin **Self-Healing** (kendi kendini iyileştirme) kapasitesinin zayıf olduğunu ve kaynakların (Connection Pool) düzgün serbest bırakılmadığını kanıtlamaktadır.
-3. **Resilience Risk:** Ani trafik artışları sonrası sistemin manuel müdahale olmadan eski stabil haline dönmemesi, prod ortamı için operasyonel bir risk teşkil etmektedir.
+1. **Breaking Point:** Sistem 200 VU (Stress) seviyesine kadar kusursuz calismaktadir. Ancak 500 VU (Spike) aninda TCP baglanti hatalari (`connectex`) uretmeye baslamistir.
+2. **Recovery Failure:** Spike testi sonrasinda yuk 30 VU seviyesine (Soak) dusurulmesine ragmen hatalarin devam ettigi gozlemlenmistir. Bu durum, sistemin **Self-Healing** (kendi kendini iyilestirme) kapasitesinin zayif oldugunu ve kaynaklarin (Connection Pool) duzgun serbest birakilmadigini kanitlamaktadir.
+3. **Resilience Risk:** Ani trafik artislari sonrasi sistemin manuel mudahale olmadan eski stabil haline donmemesi, prod ortami icin operasyonel bir risk teskil etmektedir.
 
-### 🛠️ Öneriler
-- **Altyapı:** Veritabanı ve uygulama sunucusu arasındaki bağlantı havuzu (Connection Pooling) ayarları optimize edilmeli.
-- **Ölçeklendirme:** HPA (Horizontal Pod Autoscaler) politikaları, CPU/RAM metriklerinin yanı sıra "Request per Second" bazlı da tetiklenmeli.
-- **Cache:** Ani yükleri karşılamak için önbellekleme (Redis vb.) stratejileri devreye alınmalı.
+### 🛠️ oneriler
+- **Altyapi:** Veritabani ve uygulama sunucusu arasindaki baglanti havuzu (Connection Pooling) ayarlari optimize edilmeli.
+- **olceklendirme:** HPA (Horizontal Pod Autoscaler) politikalari, CPU/RAM metriklerinin yani sira "Request per Second" bazli da tetiklenmeli.
+- **Cache:** Ani yukleri karsilamak icin onbellekleme (Redis vb.) stratejileri devreye alinmali.
 
-## 🛠️ Kurulum ve Çalıştırma
+## 🛠️ Kurulum ve calistirma
 
-### Performans Testlerini Koşturmak İçin:
-    1. [k6](https://k6.io/) aracını sisteminize kurun.
+### Performans Testlerini Kosturmak icin:
+    1. [k6](https://k6.io/) aracini sisteminize kurun.
     2. # Winget ile:
         winget install k6
-    3. # Proje ana dizinindeyken aşağıdaki komutlarla gerekli klasörleri oluşturabilirsiniz:
-        Performans klasörü ve alt dizinleri
+    3. # Proje ana dizinindeyken asagidaki komutlarla gerekli klasorleri olusturabilirsiniz:
+        Performans klasoru ve alt dizinleri
         mkdir -p performance/scripts
         mkdir -p performance/results/screenshots
-    4. Çalıştırma
+    4. calistirma
         k6 run performance/scripts/main_test.js
 
 
-# x Test #
+# Web Automation (Playwright) ozellikleri #
+    Cross-Browser Testing: Chromium ve Firefox uzerinde paralel kosum destegi.
 
-    asdasd
+    Page Object Model (POM): Surdurulebilir ve moduler kod yapisi.
+
+    Hiyerarsik Raporlama: Ekran goruntuleri test-results/ altinda tarayici ve senaryo bazli otomatik olarak siniflandirilir.
+
+    CI/CD Integration: Her push isleminde Node.js 24 ortaminda otomatik test kosumu ve artifact uretimi.
+
+    Custom Screenshot Engine: Her test adimi icin ozel isimlendirilmis gorsel kanitlar.
+
+## 🛠️ Kurulum ve calistirma
+    Bagimlilik Yonetimi: Proje kok dizininde gerekli kutuphaneler yuklenir.
+
+        Bash
+        cd automation
+        npm install
+        Tarayici Motorlari: Playwright'in ihtiyac duydugu izole tarayici paketleri sisteme tanimlanir.
+
+        Bash
+        npx playwright install --with-deps
+        🏃 Test Yurutme Stratejileri
+        Headless Kosum: Tum tarayicilarda (Chrome & Firefox) paralel testler baslatilir.
+
+        Bash
+        npx playwright test
+
+### CI/CD ve Raporlama
+    Proje, GitHub Actions ile tam entegre calismaktadir:
+
+    Pipeline: Node.js 24 tabanli guncel runner yapisi kullanilmaktadir.
+
+    Artifacts: Test sonrasi olusan ekran goruntuleri GitHub uzerinden indirilebilir.
+
+    Allure Results: Detayli raporlama icin gerekli veri seti reports/allure-results altinda toplanir.
+
+#### Yerel Raporlama ve Kanit Yonetimi
+    Hiyerarsik Screenshot Sistemi: Testler bittiginde test-results/ klasoru altinda tarayici ve senaryo bazli .png ciktilari otomatik olarak siniflandirilir.
+
+    Allure Dashboard: Detayli analiz icin yerel raporlama sunucusu baslatilir.
+
+    Bash
+    npx allure serve reports/allure-results
+    
+##### GitHub Entegrasyonu ve CI/CD Operasyon Sureci
+    Kodun paylasilan repoya aktarilmasiyla baslayan otomatik kalite kontrol hatti su sekilde islemektedir:
+
+    📂 Surum Kontrolu ve Filtreleme
+    Git Stratejisi: Gereksiz dosyalarin (node_modules, logs vb.) repoyu kirletmemesi icin .gitignore konfigurasyonu uygulanmistir.
+
+    Version Control: Yapilan degisiklikler GitHub Desktop veya Terminal uzerinden muhurlenerek uzak sunucuya gonderilir.
+
+    Bash
+    git add .
+    git commit -m "feat: setup automation and ci/cd pipeline"
+    git push origin main
+
+##### ⚡ GitHub Actions (Pipeline) Akisi
+    push islemiyle birlikte .github/workflows/playwright.yml dosyasi tetiklenir ve su surecleri yonetir:
+
+    calisma Ortami: GitHub Ubuntu Runner uzerinde Node.js 24 ortami hazirlanir.
+
+    Bulut Kosumu: Bagimliliklar kurulur ve testler "Headless" modda otomatik olarak calistirilir.
+
+    Artifact Arsivleme: Testler ister basarili ister hatali bitsin, olusan tum ekran goruntuleri GitHub uzerine yuklenir.
+
+    🔍 Bulut Kanitlarinin incelenmesi
+    GitHub uzerindeki Actions sekmesine gidilir.
+
+    ilgili "Workflow Run" secilerek sayfanin altindaki Artifacts bolumunden screenshots.zip indirilerek test kanitlari incelenir.
