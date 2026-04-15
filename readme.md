@@ -8,7 +8,7 @@
 - **`performance/`**: k6 performans scriptleri ve detayli raporlar.
 - **`test-cases/`**: Manuel test senaryolari ve Markdown formatinda Bug Raporlari.
 
-# Performans Test #
+# 1. Performans Test #
 
 ## 📊 Performans Test Analizi
 
@@ -62,7 +62,7 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
         k6 run performance/scripts/main_test.js
 
 
-# Web Automation (Playwright) ozellikleri #
+# 2. Web Automation (Playwright) ozellikleri #
     Cross-Browser Testing: Chromium ve Firefox uzerinde paralel kosum destegi.
 
     Page Object Model (POM): Surdurulebilir ve moduler kod yapisi.
@@ -105,7 +105,7 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
 
     Bash
     npx allure serve reports/allure-results
-    
+
 ##### GitHub Entegrasyonu ve CI/CD Operasyon Sureci
     Kodun paylasilan repoya aktarilmasiyla baslayan otomatik kalite kontrol hatti su sekilde islemektedir:
 
@@ -132,3 +132,21 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
     GitHub uzerindeki Actions sekmesine gidilir.
 
     ilgili "Workflow Run" secilerek sayfanin altindaki Artifacts bolumunden screenshots.zip indirilerek test kanitlari incelenir.
+
+###### Neden Playwright Tercih Edildi?
+    Bu projenin temel otomasyon motoru olarak Playwright'in secilme nedenleri, modern web uygulamalarinin test ihtiyaclarina sundugu ustun cozumlerdir:
+
+    1. Hiz ve Paralel Kosum (Efficiency)
+    Playwright, "Browser Context" mimarisi sayesinde her test icin yeni bir tarayici acmak yerine, saniyeler icinde tertemiz bir tarayici profili olusturur. Bu da 24 test case'inin paralel olarak cok daha kisa surede tamamlanmasini saglar.
+
+    2. Otomatik Bekleme (Auto-Wait)
+    Selenium'un aksine, Playwright elemanlarin tiklanabilir veya gorunur olmasini otomatik olarak bekler. Bu ozellik, testlerin kararliligini artirarak "Flaky Test" (bir gecip bir kalan test) oranini minimize eder.
+
+    3. Gercek Cross-Browser Destegi
+    Tek bir API ile Chromium (Chrome, Edge), Firefox ve WebKit (Safari) uzerinde %100 uyumlulukla test kosulabilir. Bu projede hem Chromium hem de Firefox uzerinde ayni kodun kosturulmasi bu gucu gostermektedir.
+
+    4. Gelismis Debugging ve Trace Viewer
+    Playwright'in sundugu UI Mode ve Trace Viewer, hata aninda DOM'un o anki durumunu, ag (network) isteklerini ve konsol loglarini geriye donuk inceleme imkani verir. Bu, hata analiz suresini (MTTR) ciddi oranda dusurur.
+
+    5. Native Shadow DOM ve iframe Destegi
+    Modern web bilesenleri (Shadow DOM) ve karmasik iframe yapilari ile calisirken ek bir konfigurasyona ihtiyac duymadan dogrudan erisim saglar.
