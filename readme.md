@@ -62,7 +62,7 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
         k6 run performance/scripts/main_test.js
 
 
-# 2. Web Automation (Playwright) #
+# 2. Automation (Playwright) #
     Cross-Browser Testing: Chromium ve Firefox uzerinde paralel kosum destegi.
 
     Page Object Model (POM): Surdurulebilir ve moduler kod yapisi.
