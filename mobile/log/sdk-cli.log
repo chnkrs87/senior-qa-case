@@ -1,0 +1,3529 @@
+2026-04-15T19:27:40.406Z CLI info [main]     Server listening on port: 5400
+2026-04-15T19:27:40.426Z CLI info     Config : {"userName":"[REDACTED]","accessKey":"[REDACTED]","platforms":[{"deviceName":"Samsung Galaxy S23","osVersion":"13.0","realMobile":"true","wdioService":"9.26.1"},{"deviceName":"iPhone 14","osVersion":"16","realMobile":"true","wdioService":"9.26.1"}],"isNonBstackA11yWDIO":false,"testObservability":true,"testObservabilityOptions":{"projectName":"Senior QA Project","buildName":"Build 1.0"},"accessibility":null,"browserStackLocalOptions":{"showLog":false},"testContextOptions":{"skipSessionName":false,"skipSessionStatus":false,"sessionNameOmitTestTitle":false,"sessionNamePrependTopLevelSuiteTitle":false,"sessionNameFormat":""},"buildName":"Build 1.0","projectName":"Senior QA Project","buildTag":[]}
+2026-04-15T19:27:40.430Z CLI info     Should start debug utility: undefined
+2026-04-15T19:27:40.432Z CLI info [testhub:module]  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Starting testhub from 23704:0
+2026-04-15T19:27:40.433Z CLI info  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-04-15T19:27:40.434Z CLI info  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-04-15T19:27:40.792Z CLI info  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-04-15T19:27:40.793Z CLI info  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making GET request to https://hub-use.browserstack.com
+2026-04-15T19:27:40.793Z CLI info  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-04-15T19:27:41.289Z CLI info [testhub:module]  [cihankiri_KSvWc3]   [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  startBuild: response=xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq
+2026-04-15T19:27:41.290Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-04-15T19:27:42.569Z CLI info [sdk:service]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Driver initialized as primary driver: platformIndex=0
+2026-04-15T19:28:09.734Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:28:09.736Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78',
+    name: 'S1: Kullanici basarili sekilde login olabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const inventoryList = await $('.inventory_list');\r\n" +
+        '        await expect(inventoryList).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+        '    }'
+    },
+    identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:28:09.738Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:10.974Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli","test_name":"S1: Kullanici basarili sekilde login olabilmeli","test_code":"async () => {\r\n        const inventoryList = await $('.inventory_list');\r\n        await expect(inventoryList).toBeDisplayed();\r\n        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:28:09.738Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:28:10.986Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:28:10.975Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78',
+    name: 'S1: Kullanici basarili sekilde login olabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const inventoryList = await $('.inventory_list');\r\n" +
+        '        await expect(inventoryList).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+        '    }'
+    },
+    identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 1248,
+    started_at: '2026-04-15T19:28:09.738Z',
+    finished_at: '2026-04-15T19:28:10.986Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:11.389Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '49ef1ae8609742fd94e7258580c6d1e4be462227',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              browserName: 'chrome',
+              'goog:chromeOptions': {
+                args: [
+                  '--proxy-bypass-list=<-loopback>',
+                  'test-type',
+                  '--proxy-server=http://194.165.161.215:26083',
+                  '--disable-features=Translate'
+                ]
+              },
+              newCommandTimeout: 0,
+              deviceName: 'android',
+              chromedriverArgs: [ '--adb-port=5038' ],
+              systemPort: 8203,
+              udid: 'RFCW71G6WEK',
+              chromedriverPort: 18083,
+              skipServerInstallation: true
+            },
+            platformName: 'Android',
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+              args: [
+                '--proxy-bypass-list=<-loopback>',
+                'test-type',
+                '--proxy-server=http://194.165.161.215:26083',
+                '--disable-features=Translate'
+              ]
+            },
+            newCommandTimeout: 0,
+            deviceName: 'RFCW71G6WEK',
+            chromedriverArgs: [ '--adb-port=5038' ],
+            systemPort: 8203,
+            udid: 'RFCW71G6WEK',
+            chromedriverPort: 18083,
+            skipServerInstallation: true,
+            appPackage: 'com.android.chrome',
+            appActivity: 'com.google.android.apps.chrome.Main',
+            deviceUDID: 'RFCW71G6WEK',
+            deviceApiLevel: 33,
+            platformVersion: '13',
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 }
+          },
+          platform: 'Android',
+          platform_version: '13',
+          browser: 'chrome',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78',
+      name: 'S1: Kullanici basarili sekilde login olabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const inventoryList = await $('.inventory_list');\r\n" +
+          '        await expect(inventoryList).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+          '    }'
+      },
+      identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:28:09.738Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '0d3e5f72-cfc8-41ce-8623-9b90a1b9eb78',
+      name: 'S1: Kullanici basarili sekilde login olabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const inventoryList = await $('.inventory_list');\r\n" +
+          '        await expect(inventoryList).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+          '    }'
+      },
+      identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 1248,
+      started_at: '2026-04-15T19:28:09.738Z',
+      finished_at: '2026-04-15T19:28:10.986Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:11.391Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:15.227Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '7494fc52-3806-4c95-8913-c9f3ef8af0f8',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:28:15.228Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '7494fc52-3806-4c95-8913-c9f3ef8af0f8',
+    name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const footer = await $('footer');\r\n" +
+        '        await footer.scrollIntoView();\r\n' +
+        '        await expect(footer).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+        '    }'
+    },
+    identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:28:15.236Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:15.407Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '7494fc52-3806-4c95-8913-c9f3ef8af0f8',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '49ef1ae8609742fd94e7258580c6d1e4be462227',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              browserName: 'chrome',
+              'goog:chromeOptions': {
+                args: [
+                  '--proxy-bypass-list=<-loopback>',
+                  'test-type',
+                  '--proxy-server=http://194.165.161.215:26083',
+                  '--disable-features=Translate'
+                ]
+              },
+              newCommandTimeout: 0,
+              deviceName: 'android',
+              chromedriverArgs: [ '--adb-port=5038' ],
+              systemPort: 8203,
+              udid: 'RFCW71G6WEK',
+              chromedriverPort: 18083,
+              skipServerInstallation: true
+            },
+            platformName: 'Android',
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+              args: [
+                '--proxy-bypass-list=<-loopback>',
+                'test-type',
+                '--proxy-server=http://194.165.161.215:26083',
+                '--disable-features=Translate'
+              ]
+            },
+            newCommandTimeout: 0,
+            deviceName: 'RFCW71G6WEK',
+            chromedriverArgs: [ '--adb-port=5038' ],
+            systemPort: 8203,
+            udid: 'RFCW71G6WEK',
+            chromedriverPort: 18083,
+            skipServerInstallation: true,
+            appPackage: 'com.android.chrome',
+            appActivity: 'com.google.android.apps.chrome.Main',
+            deviceUDID: 'RFCW71G6WEK',
+            deviceApiLevel: 33,
+            platformVersion: '13',
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 }
+          },
+          platform: 'Android',
+          platform_version: '13',
+          browser: 'chrome',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '7494fc52-3806-4c95-8913-c9f3ef8af0f8',
+      name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const footer = await $('footer');\r\n" +
+          '        await footer.scrollIntoView();\r\n' +
+          '        await expect(footer).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+          '    }'
+      },
+      identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:28:15.236Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:15.407Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:16.500Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"7494fc52-3806-4c95-8913-c9f3ef8af0f8","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli","test_name":"S2: Sayfa sonuna kadar scroll yapilabilmeli","test_code":"async () => {\r\n        const footer = await $('footer');\r\n        await footer.scrollIntoView();\r\n        await expect(footer).toBeDisplayed();\r\n        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:28:15.236Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:28:16.512Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:28:16.501Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '7494fc52-3806-4c95-8913-c9f3ef8af0f8',
+    name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const footer = await $('footer');\r\n" +
+        '        await footer.scrollIntoView();\r\n' +
+        '        await expect(footer).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+        '    }'
+    },
+    identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 1276,
+    started_at: '2026-04-15T19:28:15.236Z',
+    finished_at: '2026-04-15T19:28:16.512Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:17.420Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '7494fc52-3806-4c95-8913-c9f3ef8af0f8',
+      name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const footer = await $('footer');\r\n" +
+          '        await footer.scrollIntoView();\r\n' +
+          '        await expect(footer).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+          '    }'
+      },
+      identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 1276,
+      started_at: '2026-04-15T19:28:15.236Z',
+      finished_at: '2026-04-15T19:28:16.512Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:17.421Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:20.235Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '6e046236-93fc-4966-8e17-0100cbff278a',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:28:20.236Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '6e046236-93fc-4966-8e17-0100cbff278a',
+    name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+        '        \r\n' +
+        "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+        '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        await addToCart.click();\r\n' +
+        '\r\n' +
+        "        const badge = await $('.shopping_cart_badge');\r\n" +
+        '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        \r\n' +
+        "        await expect(badge).toHaveText('1');\r\n" +
+        "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+        '\r\n' +
+        '        \r\n' +
+        '        await badge.click();\r\n' +
+        "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+        "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+        '    }'
+    },
+    identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:28:20.245Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:21.438Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '6e046236-93fc-4966-8e17-0100cbff278a',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '49ef1ae8609742fd94e7258580c6d1e4be462227',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              browserName: 'chrome',
+              'goog:chromeOptions': {
+                args: [
+                  '--proxy-bypass-list=<-loopback>',
+                  'test-type',
+                  '--proxy-server=http://194.165.161.215:26083',
+                  '--disable-features=Translate'
+                ]
+              },
+              newCommandTimeout: 0,
+              deviceName: 'android',
+              chromedriverArgs: [ '--adb-port=5038' ],
+              systemPort: 8203,
+              udid: 'RFCW71G6WEK',
+              chromedriverPort: 18083,
+              skipServerInstallation: true
+            },
+            platformName: 'Android',
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+              args: [
+                '--proxy-bypass-list=<-loopback>',
+                'test-type',
+                '--proxy-server=http://194.165.161.215:26083',
+                '--disable-features=Translate'
+              ]
+            },
+            newCommandTimeout: 0,
+            deviceName: 'RFCW71G6WEK',
+            chromedriverArgs: [ '--adb-port=5038' ],
+            systemPort: 8203,
+            udid: 'RFCW71G6WEK',
+            chromedriverPort: 18083,
+            skipServerInstallation: true,
+            appPackage: 'com.android.chrome',
+            appActivity: 'com.google.android.apps.chrome.Main',
+            deviceUDID: 'RFCW71G6WEK',
+            deviceApiLevel: 33,
+            platformVersion: '13',
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 }
+          },
+          platform: 'Android',
+          platform_version: '13',
+          browser: 'chrome',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '6e046236-93fc-4966-8e17-0100cbff278a',
+      name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+          '        \r\n' +
+          "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+          '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        await addToCart.click();\r\n' +
+          '\r\n' +
+          "        const badge = await $('.shopping_cart_badge');\r\n" +
+          '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        \r\n' +
+          "        await expect(badge).toHaveText('1');\r\n" +
+          "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+          '\r\n' +
+          '        \r\n' +
+          '        await badge.click();\r\n' +
+          "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+          "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+          '    }'
+      },
+      identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:28:20.245Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:21.438Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:25.707Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"6e046236-93fc-4966-8e17-0100cbff278a","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü","test_name":"S3: Sepete urun ekleme ve Badge kontrolü","test_code":"async () => {\r\n        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n        \r\n        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n        await addToCart.click();\r\n\r\n        const badge = await $('.shopping_cart_badge');\r\n        await badge.waitForDisplayed({ timeout: 5000 });\r\n        \r\n        await expect(badge).toHaveText('1');\r\n        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n\r\n        \r\n        await badge.click();\r\n        await expect($('.cart_item')).toBeDisplayed();\r\n        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:28:20.245Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:28:25.719Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:28:25.708Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '6e046236-93fc-4966-8e17-0100cbff278a',
+    name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+        '        \r\n' +
+        "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+        '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        await addToCart.click();\r\n' +
+        '\r\n' +
+        "        const badge = await $('.shopping_cart_badge');\r\n" +
+        '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        \r\n' +
+        "        await expect(badge).toHaveText('1');\r\n" +
+        "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+        '\r\n' +
+        '        \r\n' +
+        '        await badge.click();\r\n' +
+        "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+        "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+        '    }'
+    },
+    identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 5474,
+    started_at: '2026-04-15T19:28:20.245Z',
+    finished_at: '2026-04-15T19:28:25.719Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:27.458Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '6e046236-93fc-4966-8e17-0100cbff278a',
+      name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+          '        \r\n' +
+          "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+          '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        await addToCart.click();\r\n' +
+          '\r\n' +
+          "        const badge = await $('.shopping_cart_badge');\r\n" +
+          '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        \r\n' +
+          "        await expect(badge).toHaveText('1');\r\n" +
+          "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+          '\r\n' +
+          '        \r\n' +
+          '        await badge.click();\r\n' +
+          "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+          "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+          '    }'
+      },
+      identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 5474,
+      started_at: '2026-04-15T19:28:20.245Z',
+      finished_at: '2026-04-15T19:28:25.719Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:27.459Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:29.458Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '49ebc991-cbac-4c07-871c-74ee777a4865',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:28:29.459Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '49ebc991-cbac-4c07-871c-74ee777a4865',
+    name: 'S4: Responsive gorunum ve Orientation kontrolu',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '        if (browser.isMobile) {\r\n' +
+        "            await browser.setOrientation('landscape');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+        '            \r\n' +
+        "            await browser.setOrientation('portrait');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+        '        } else {\r\n' +
+        '            await browser.setWindowSize(800, 600);\r\n' +
+        "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+        '        }\r\n' +
+        '    }'
+    },
+    identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:28:29.468Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:29.459Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '49ebc991-cbac-4c07-871c-74ee777a4865',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '49ef1ae8609742fd94e7258580c6d1e4be462227',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              browserName: 'chrome',
+              'goog:chromeOptions': {
+                args: [
+                  '--proxy-bypass-list=<-loopback>',
+                  'test-type',
+                  '--proxy-server=http://194.165.161.215:26083',
+                  '--disable-features=Translate'
+                ]
+              },
+              newCommandTimeout: 0,
+              deviceName: 'android',
+              chromedriverArgs: [ '--adb-port=5038' ],
+              systemPort: 8203,
+              udid: 'RFCW71G6WEK',
+              chromedriverPort: 18083,
+              skipServerInstallation: true
+            },
+            platformName: 'Android',
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+              args: [
+                '--proxy-bypass-list=<-loopback>',
+                'test-type',
+                '--proxy-server=http://194.165.161.215:26083',
+                '--disable-features=Translate'
+              ]
+            },
+            newCommandTimeout: 0,
+            deviceName: 'RFCW71G6WEK',
+            chromedriverArgs: [ '--adb-port=5038' ],
+            systemPort: 8203,
+            udid: 'RFCW71G6WEK',
+            chromedriverPort: 18083,
+            skipServerInstallation: true,
+            appPackage: 'com.android.chrome',
+            appActivity: 'com.google.android.apps.chrome.Main',
+            deviceUDID: 'RFCW71G6WEK',
+            deviceApiLevel: 33,
+            platformVersion: '13',
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 }
+          },
+          platform: 'Android',
+          platform_version: '13',
+          browser: 'chrome',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '49ebc991-cbac-4c07-871c-74ee777a4865',
+      name: 'S4: Responsive gorunum ve Orientation kontrolu',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '        if (browser.isMobile) {\r\n' +
+          "            await browser.setOrientation('landscape');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+          '            \r\n' +
+          "            await browser.setOrientation('portrait');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+          '        } else {\r\n' +
+          '            await browser.setWindowSize(800, 600);\r\n' +
+          "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+          '        }\r\n' +
+          '    }'
+      },
+      identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:28:29.468Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:29.460Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:37.412Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"49ebc991-cbac-4c07-871c-74ee777a4865","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu","test_name":"S4: Responsive gorunum ve Orientation kontrolu","test_code":"async () => {\r\n        if (browser.isMobile) {\r\n            await browser.setOrientation('landscape');\r\n            await browser.pause(1500);\r\n            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n            \r\n            await browser.setOrientation('portrait');\r\n            await browser.pause(1500);\r\n            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n        } else {\r\n            await browser.setWindowSize(800, 600);\r\n            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n        }\r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:28:29.468Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:28:37.424Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:28:37.413Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '49ebc991-cbac-4c07-871c-74ee777a4865',
+    name: 'S4: Responsive gorunum ve Orientation kontrolu',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '        if (browser.isMobile) {\r\n' +
+        "            await browser.setOrientation('landscape');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+        '            \r\n' +
+        "            await browser.setOrientation('portrait');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+        '        } else {\r\n' +
+        '            await browser.setWindowSize(800, 600);\r\n' +
+        "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+        '        }\r\n' +
+        '    }'
+    },
+    identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 7956,
+    started_at: '2026-04-15T19:28:29.468Z',
+    finished_at: '2026-04-15T19:28:37.424Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:37.497Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '49ebc991-cbac-4c07-871c-74ee777a4865',
+      name: 'S4: Responsive gorunum ve Orientation kontrolu',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '        if (browser.isMobile) {\r\n' +
+          "            await browser.setOrientation('landscape');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+          '            \r\n' +
+          "            await browser.setOrientation('portrait');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+          '        } else {\r\n' +
+          '            await browser.setWindowSize(800, 600);\r\n' +
+          "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+          '        }\r\n' +
+          '    }'
+      },
+      identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 7956,
+      started_at: '2026-04-15T19:28:29.468Z',
+      finished_at: '2026-04-15T19:28:37.424Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:37.498Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:41.209Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: 'ca8957f4-6403-431c-bea7-41ed6b59acdc',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:28:41.210Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'ca8957f4-6403-431c-bea7-41ed6b59acdc',
+    name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    const size = await browser.getWindowSize();\r\n' +
+        '    const width = size.width;\r\n' +
+        '\r\n' +
+        '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+        '\r\n' +
+        "    const menuBtn = await $('.bm-burger-button');\r\n" +
+        '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await menuBtn.click();\r\n' +
+        '    } catch (e) {\r\n' +
+        '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(2000); \r\n' +
+        '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+        '\r\n' +
+        "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '    \r\n' +
+        '  \r\n' +
+        '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '    } catch (e) {\r\n' +
+        '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(1500); \r\n' +
+        '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+        '    \r\n' +
+        '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+        '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+        '}'
+    },
+    identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:28:41.206Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:41.512Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: 'ca8957f4-6403-431c-bea7-41ed6b59acdc',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '49ef1ae8609742fd94e7258580c6d1e4be462227',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              browserName: 'chrome',
+              'goog:chromeOptions': {
+                args: [
+                  '--proxy-bypass-list=<-loopback>',
+                  'test-type',
+                  '--proxy-server=http://194.165.161.215:26083',
+                  '--disable-features=Translate'
+                ]
+              },
+              newCommandTimeout: 0,
+              deviceName: 'android',
+              chromedriverArgs: [ '--adb-port=5038' ],
+              systemPort: 8203,
+              udid: 'RFCW71G6WEK',
+              chromedriverPort: 18083,
+              skipServerInstallation: true
+            },
+            platformName: 'Android',
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+              args: [
+                '--proxy-bypass-list=<-loopback>',
+                'test-type',
+                '--proxy-server=http://194.165.161.215:26083',
+                '--disable-features=Translate'
+              ]
+            },
+            newCommandTimeout: 0,
+            deviceName: 'RFCW71G6WEK',
+            chromedriverArgs: [ '--adb-port=5038' ],
+            systemPort: 8203,
+            udid: 'RFCW71G6WEK',
+            chromedriverPort: 18083,
+            skipServerInstallation: true,
+            appPackage: 'com.android.chrome',
+            appActivity: 'com.google.android.apps.chrome.Main',
+            deviceUDID: 'RFCW71G6WEK',
+            deviceApiLevel: 33,
+            platformVersion: '13',
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 }
+          },
+          platform: 'Android',
+          platform_version: '13',
+          browser: 'chrome',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'ca8957f4-6403-431c-bea7-41ed6b59acdc',
+      name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    const size = await browser.getWindowSize();\r\n' +
+          '    const width = size.width;\r\n' +
+          '\r\n' +
+          '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+          '\r\n' +
+          "    const menuBtn = await $('.bm-burger-button');\r\n" +
+          '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await menuBtn.click();\r\n' +
+          '    } catch (e) {\r\n' +
+          '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(2000); \r\n' +
+          '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+          '\r\n' +
+          "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '    \r\n' +
+          '  \r\n' +
+          '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '    } catch (e) {\r\n' +
+          '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(1500); \r\n' +
+          '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+          '    \r\n' +
+          '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+          '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+          '}'
+      },
+      identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:28:41.206Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:41.513Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:49.967Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"ca8957f4-6403-431c-bea7-41ed6b59acdc","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)","test_name":"S5: Responsive Layout Kontrolu (Her Adım SS)","test_code":"async () => {\r\n    const size = await browser.getWindowSize();\r\n    const width = size.width;\r\n\r\n    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n\r\n    const menuBtn = await $('.bm-burger-button');\r\n    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n    \r\n    try {\r\n        await menuBtn.click();\r\n    } catch (e) {\r\n        await browser.execute((el) => el.click(), menuBtn);\r\n    }\r\n    \r\n    await browser.pause(2000); \r\n    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n\r\n    const closeBtn = await $('#react-burger-cross-btn');\r\n    \r\n  \r\n    await closeBtn.waitForExist({ timeout: 5000 });\r\n    \r\n    try {\r\n        await browser.execute((el) => el.click(), closeBtn);\r\n    } catch (e) {\r\n        console.log(\"Normal click başarısız, menü açık kalmış olabilir.\");\r\n    }\r\n    \r\n    await browser.pause(1500); \r\n    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n    \r\n    await browser.execute(() => window.scrollTo(0, 500));\r\n    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n}","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:28:41.206Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:28:49.961Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:28:49.967Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'ca8957f4-6403-431c-bea7-41ed6b59acdc',
+    name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    const size = await browser.getWindowSize();\r\n' +
+        '    const width = size.width;\r\n' +
+        '\r\n' +
+        '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+        '\r\n' +
+        "    const menuBtn = await $('.bm-burger-button');\r\n" +
+        '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await menuBtn.click();\r\n' +
+        '    } catch (e) {\r\n' +
+        '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(2000); \r\n' +
+        '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+        '\r\n' +
+        "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '    \r\n' +
+        '  \r\n' +
+        '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '    } catch (e) {\r\n' +
+        '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(1500); \r\n' +
+        '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+        '    \r\n' +
+        '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+        '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+        '}'
+    },
+    identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 8755,
+    started_at: '2026-04-15T19:28:41.206Z',
+    finished_at: '2026-04-15T19:28:49.961Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:51.536Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'ca8957f4-6403-431c-bea7-41ed6b59acdc',
+      name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    const size = await browser.getWindowSize();\r\n' +
+          '    const width = size.width;\r\n' +
+          '\r\n' +
+          '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+          '\r\n' +
+          "    const menuBtn = await $('.bm-burger-button');\r\n" +
+          '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await menuBtn.click();\r\n' +
+          '    } catch (e) {\r\n' +
+          '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(2000); \r\n' +
+          '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+          '\r\n' +
+          "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '    \r\n' +
+          '  \r\n' +
+          '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '    } catch (e) {\r\n' +
+          '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(1500); \r\n' +
+          '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+          '    \r\n' +
+          '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+          '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+          '}'
+      },
+      identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 8755,
+      started_at: '2026-04-15T19:28:41.206Z',
+      finished_at: '2026-04-15T19:28:49.961Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:51.537Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:28:53.718Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '1c904134-b599-41c8-8a30-56d04c29a28f',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:28:53.718Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '1c904134-b599-41c8-8a30-56d04c29a28f',
+    name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    if (browser.isMobile) {\r\n' +
+        "        await browser.setOrientation('landscape');\r\n" +
+        '        await browser.pause(2000); \r\n' +
+        '        \r\n' +
+        "        const logo = await $('.app_logo');\r\n" +
+        '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+        "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+        '\r\n' +
+        "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '        \r\n' +
+        '        if (await closeBtn.isExisting()) {\r\n' +
+        '            try {\r\n' +
+        '                \r\n' +
+        '                await closeBtn.click();\r\n' +
+        '            } catch (e) {\r\n' +
+        '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '            }\r\n' +
+        '            await browser.pause(1000);\r\n' +
+        '        }\r\n' +
+        '\r\n' +
+        "        await browser.setOrientation('portrait');\r\n" +
+        '        await browser.pause(1500);\r\n' +
+        "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+        '        \r\n' +
+        '    } else {\r\n' +
+        '        console.log("Desktop: S6 Atlandi.");\r\n' +
+        '    }\r\n' +
+        '}'
+    },
+    identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:28:53.710Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:28:55.545Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '1c904134-b599-41c8-8a30-56d04c29a28f',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '49ef1ae8609742fd94e7258580c6d1e4be462227',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              browserName: 'chrome',
+              'goog:chromeOptions': {
+                args: [
+                  '--proxy-bypass-list=<-loopback>',
+                  'test-type',
+                  '--proxy-server=http://194.165.161.215:26083',
+                  '--disable-features=Translate'
+                ]
+              },
+              newCommandTimeout: 0,
+              deviceName: 'android',
+              chromedriverArgs: [ '--adb-port=5038' ],
+              systemPort: 8203,
+              udid: 'RFCW71G6WEK',
+              chromedriverPort: 18083,
+              skipServerInstallation: true
+            },
+            platformName: 'Android',
+            browserName: 'chrome',
+            'goog:chromeOptions': {
+              args: [
+                '--proxy-bypass-list=<-loopback>',
+                'test-type',
+                '--proxy-server=http://194.165.161.215:26083',
+                '--disable-features=Translate'
+              ]
+            },
+            newCommandTimeout: 0,
+            deviceName: 'RFCW71G6WEK',
+            chromedriverArgs: [ '--adb-port=5038' ],
+            systemPort: 8203,
+            udid: 'RFCW71G6WEK',
+            chromedriverPort: 18083,
+            skipServerInstallation: true,
+            appPackage: 'com.android.chrome',
+            appActivity: 'com.google.android.apps.chrome.Main',
+            deviceUDID: 'RFCW71G6WEK',
+            deviceApiLevel: 33,
+            platformVersion: '13',
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 }
+          },
+          platform: 'Android',
+          platform_version: '13',
+          browser: 'chrome',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '1c904134-b599-41c8-8a30-56d04c29a28f',
+      name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    if (browser.isMobile) {\r\n' +
+          "        await browser.setOrientation('landscape');\r\n" +
+          '        await browser.pause(2000); \r\n' +
+          '        \r\n' +
+          "        const logo = await $('.app_logo');\r\n" +
+          '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+          "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+          '\r\n' +
+          "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '        \r\n' +
+          '        if (await closeBtn.isExisting()) {\r\n' +
+          '            try {\r\n' +
+          '                \r\n' +
+          '                await closeBtn.click();\r\n' +
+          '            } catch (e) {\r\n' +
+          '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '            }\r\n' +
+          '            await browser.pause(1000);\r\n' +
+          '        }\r\n' +
+          '\r\n' +
+          "        await browser.setOrientation('portrait');\r\n" +
+          '        await browser.pause(1500);\r\n' +
+          "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+          '        \r\n' +
+          '    } else {\r\n' +
+          '        console.log("Desktop: S6 Atlandi.");\r\n' +
+          '    }\r\n' +
+          '}'
+      },
+      identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:28:53.710Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:28:55.546Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:11.617Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"1c904134-b599-41c8-8a30-56d04c29a28f","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali","test_name":"S6: Cihazin yan cevrilme durumu dogrulanmali","test_code":"async () => {\r\n    if (browser.isMobile) {\r\n        await browser.setOrientation('landscape');\r\n        await browser.pause(2000); \r\n        \r\n        const logo = await $('.app_logo');\r\n        await logo.waitForDisplayed({ timeout: 5000 });\r\n        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n\r\n        const closeBtn = await $('#react-burger-cross-btn');\r\n        \r\n        if (await closeBtn.isExisting()) {\r\n            try {\r\n                \r\n                await closeBtn.click();\r\n            } catch (e) {\r\n                await browser.execute((el) => el.click(), closeBtn);\r\n            }\r\n            await browser.pause(1000);\r\n        }\r\n\r\n        await browser.setOrientation('portrait');\r\n        await browser.pause(1500);\r\n        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n        \r\n    } else {\r\n        console.log(\"Desktop: S6 Atlandi.\");\r\n    }\r\n}","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:28:53.710Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:29:11.611Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:29:11.618Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '1c904134-b599-41c8-8a30-56d04c29a28f',
+    name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    if (browser.isMobile) {\r\n' +
+        "        await browser.setOrientation('landscape');\r\n" +
+        '        await browser.pause(2000); \r\n' +
+        '        \r\n' +
+        "        const logo = await $('.app_logo');\r\n" +
+        '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+        "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+        '\r\n' +
+        "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '        \r\n' +
+        '        if (await closeBtn.isExisting()) {\r\n' +
+        '            try {\r\n' +
+        '                \r\n' +
+        '                await closeBtn.click();\r\n' +
+        '            } catch (e) {\r\n' +
+        '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '            }\r\n' +
+        '            await browser.pause(1000);\r\n' +
+        '        }\r\n' +
+        '\r\n' +
+        "        await browser.setOrientation('portrait');\r\n" +
+        '        await browser.pause(1500);\r\n' +
+        "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+        '        \r\n' +
+        '    } else {\r\n' +
+        '        console.log("Desktop: S6 Atlandi.");\r\n' +
+        '    }\r\n' +
+        '}'
+    },
+    identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 17901,
+    started_at: '2026-04-15T19:28:53.710Z',
+    finished_at: '2026-04-15T19:29:11.611Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:13.591Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '1c904134-b599-41c8-8a30-56d04c29a28f',
+      name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    if (browser.isMobile) {\r\n' +
+          "        await browser.setOrientation('landscape');\r\n" +
+          '        await browser.pause(2000); \r\n' +
+          '        \r\n' +
+          "        const logo = await $('.app_logo');\r\n" +
+          '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+          "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+          '\r\n' +
+          "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '        \r\n' +
+          '        if (await closeBtn.isExisting()) {\r\n' +
+          '            try {\r\n' +
+          '                \r\n' +
+          '                await closeBtn.click();\r\n' +
+          '            } catch (e) {\r\n' +
+          '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '            }\r\n' +
+          '            await browser.pause(1000);\r\n' +
+          '        }\r\n' +
+          '\r\n' +
+          "        await browser.setOrientation('portrait');\r\n" +
+          '        await browser.pause(1500);\r\n' +
+          "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+          '        \r\n' +
+          '    } else {\r\n' +
+          '        console.log("Desktop: S6 Atlandi.");\r\n' +
+          '    }\r\n' +
+          '}'
+      },
+      identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 17901,
+      started_at: '2026-04-15T19:28:53.710Z',
+      finished_at: '2026-04-15T19:29:11.611Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:13.591Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:14.520Z CLI info [sdk:service]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Driver initialized as primary driver: platformIndex=1
+2026-04-15T19:29:37.338Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: 'd3f2f623-9a46-4ad9-9294-ae5d5147dc63',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:29:37.339Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'd3f2f623-9a46-4ad9-9294-ae5d5147dc63',
+    name: 'S1: Kullanici basarili sekilde login olabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const inventoryList = await $('.inventory_list');\r\n" +
+        '        await expect(inventoryList).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+        '    }'
+    },
+    identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:29:37.332Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:37.670Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: 'd3f2f623-9a46-4ad9-9294-ae5d5147dc63',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '6915c5b10c166d021c4129b0c27eb3fb50e442d6',
+          capabilities: {
+            webStorageEnabled: false,
+            locationContextEnabled: false,
+            browserName: 'safari',
+            platform: 'MAC',
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            takesScreenshot: true,
+            networkConnectionEnabled: false,
+            platformName: 'iOS',
+            newCommandTimeout: 0,
+            realMobile: 'true',
+            deviceName: 'iPhone 14',
+            safariIgnoreFraudWarning: true,
+            orientation: 'PORTRAIT',
+            deviceOrientation: 'PORTRAIT',
+            noReset: true,
+            automationName: 'XCUITest',
+            keychainPath: '[REDACTED VALUE]',
+            keychainPassword: '[REDACTED VALUE]',
+            useXctestrunFile: true,
+            bootstrapPath: '/usr/local/.browserstack/config/wda_derived_data_16_3.2.0.10.23.2_515e29e8-234f-4a0f-a938-5ab844beed3d/Build/Products',
+            'browserstack.isTargetBased': 'true',
+            udid: '00008110-000E38A90EB9401E'
+          },
+          platform: 'iOS',
+          platform_version: '16',
+          browser: 'safari',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'd3f2f623-9a46-4ad9-9294-ae5d5147dc63',
+      name: 'S1: Kullanici basarili sekilde login olabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const inventoryList = await $('.inventory_list');\r\n" +
+          '        await expect(inventoryList).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+          '    }'
+      },
+      identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:29:37.332Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:37.671Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:38.833Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"d3f2f623-9a46-4ad9-9294-ae5d5147dc63","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli","test_name":"S1: Kullanici basarili sekilde login olabilmeli","test_code":"async () => {\r\n        const inventoryList = await $('.inventory_list');\r\n        await expect(inventoryList).toBeDisplayed();\r\n        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:29:37.332Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:29:38.831Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:29:38.833Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'd3f2f623-9a46-4ad9-9294-ae5d5147dc63',
+    name: 'S1: Kullanici basarili sekilde login olabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const inventoryList = await $('.inventory_list');\r\n" +
+        '        await expect(inventoryList).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+        '    }'
+    },
+    identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 1499,
+    started_at: '2026-04-15T19:29:37.332Z',
+    finished_at: '2026-04-15T19:29:38.831Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:39.676Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'd3f2f623-9a46-4ad9-9294-ae5d5147dc63',
+      name: 'S1: Kullanici basarili sekilde login olabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const inventoryList = await $('.inventory_list');\r\n" +
+          '        await expect(inventoryList).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S1_Login_Basarili_Kontrol'); \r\n" +
+          '    }'
+      },
+      identifier: 'S1: Kullanici basarili sekilde login olabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S1: Kullanici basarili sekilde login olabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 1499,
+      started_at: '2026-04-15T19:29:37.332Z',
+      finished_at: '2026-04-15T19:29:38.831Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:39.677Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:42.587Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '1b3a07eb-50b7-400e-8d1b-2bb2497400a4',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:29:42.588Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '1b3a07eb-50b7-400e-8d1b-2bb2497400a4',
+    name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const footer = await $('footer');\r\n" +
+        '        await footer.scrollIntoView();\r\n' +
+        '        await expect(footer).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+        '    }'
+    },
+    identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:29:42.587Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:43.676Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '1b3a07eb-50b7-400e-8d1b-2bb2497400a4',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '6915c5b10c166d021c4129b0c27eb3fb50e442d6',
+          capabilities: {
+            webStorageEnabled: false,
+            locationContextEnabled: false,
+            browserName: 'safari',
+            platform: 'MAC',
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            takesScreenshot: true,
+            networkConnectionEnabled: false,
+            platformName: 'iOS',
+            newCommandTimeout: 0,
+            realMobile: 'true',
+            deviceName: 'iPhone 14',
+            safariIgnoreFraudWarning: true,
+            orientation: 'PORTRAIT',
+            deviceOrientation: 'PORTRAIT',
+            noReset: true,
+            automationName: 'XCUITest',
+            keychainPath: '[REDACTED VALUE]',
+            keychainPassword: '[REDACTED VALUE]',
+            useXctestrunFile: true,
+            bootstrapPath: '/usr/local/.browserstack/config/wda_derived_data_16_3.2.0.10.23.2_515e29e8-234f-4a0f-a938-5ab844beed3d/Build/Products',
+            'browserstack.isTargetBased': 'true',
+            udid: '00008110-000E38A90EB9401E'
+          },
+          platform: 'iOS',
+          platform_version: '16',
+          browser: 'safari',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '1b3a07eb-50b7-400e-8d1b-2bb2497400a4',
+      name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const footer = await $('footer');\r\n" +
+          '        await footer.scrollIntoView();\r\n' +
+          '        await expect(footer).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+          '    }'
+      },
+      identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:29:42.587Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:43.677Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:43.967Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"1b3a07eb-50b7-400e-8d1b-2bb2497400a4","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli","test_name":"S2: Sayfa sonuna kadar scroll yapilabilmeli","test_code":"async () => {\r\n        const footer = await $('footer');\r\n        await footer.scrollIntoView();\r\n        await expect(footer).toBeDisplayed();\r\n        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:29:42.587Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:29:43.968Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:29:43.968Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '1b3a07eb-50b7-400e-8d1b-2bb2497400a4',
+    name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        const footer = await $('footer');\r\n" +
+        '        await footer.scrollIntoView();\r\n' +
+        '        await expect(footer).toBeDisplayed();\r\n' +
+        "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+        '    }'
+    },
+    identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 1381,
+    started_at: '2026-04-15T19:29:42.587Z',
+    finished_at: '2026-04-15T19:29:43.968Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:45.676Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '1b3a07eb-50b7-400e-8d1b-2bb2497400a4',
+      name: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        const footer = await $('footer');\r\n" +
+          '        await footer.scrollIntoView();\r\n' +
+          '        await expect(footer).toBeDisplayed();\r\n' +
+          "        await browser.takeProof('S2_1_Sayfa_Sonu_Scroll'); \r\n" +
+          '    }'
+      },
+      identifier: 'S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S2: Sayfa sonuna kadar scroll yapilabilmeli',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 1381,
+      started_at: '2026-04-15T19:29:42.587Z',
+      finished_at: '2026-04-15T19:29:43.968Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:45.676Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:47.742Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '04f0d059-d64d-42bd-ae76-b90b0b647fa6',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:29:47.743Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '04f0d059-d64d-42bd-ae76-b90b0b647fa6',
+    name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+        '        \r\n' +
+        "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+        '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        await addToCart.click();\r\n' +
+        '\r\n' +
+        "        const badge = await $('.shopping_cart_badge');\r\n" +
+        '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        \r\n' +
+        "        await expect(badge).toHaveText('1');\r\n" +
+        "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+        '\r\n' +
+        '        \r\n' +
+        '        await badge.click();\r\n' +
+        "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+        "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+        '    }'
+    },
+    identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:29:47.739Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:49.685Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '04f0d059-d64d-42bd-ae76-b90b0b647fa6',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '6915c5b10c166d021c4129b0c27eb3fb50e442d6',
+          capabilities: {
+            webStorageEnabled: false,
+            locationContextEnabled: false,
+            browserName: 'safari',
+            platform: 'MAC',
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            takesScreenshot: true,
+            networkConnectionEnabled: false,
+            platformName: 'iOS',
+            newCommandTimeout: 0,
+            realMobile: 'true',
+            deviceName: 'iPhone 14',
+            safariIgnoreFraudWarning: true,
+            orientation: 'PORTRAIT',
+            deviceOrientation: 'PORTRAIT',
+            noReset: true,
+            automationName: 'XCUITest',
+            keychainPath: '[REDACTED VALUE]',
+            keychainPassword: '[REDACTED VALUE]',
+            useXctestrunFile: true,
+            bootstrapPath: '/usr/local/.browserstack/config/wda_derived_data_16_3.2.0.10.23.2_515e29e8-234f-4a0f-a938-5ab844beed3d/Build/Products',
+            'browserstack.isTargetBased': 'true',
+            udid: '00008110-000E38A90EB9401E'
+          },
+          platform: 'iOS',
+          platform_version: '16',
+          browser: 'safari',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '04f0d059-d64d-42bd-ae76-b90b0b647fa6',
+      name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+          '        \r\n' +
+          "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+          '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        await addToCart.click();\r\n' +
+          '\r\n' +
+          "        const badge = await $('.shopping_cart_badge');\r\n" +
+          '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        \r\n' +
+          "        await expect(badge).toHaveText('1');\r\n" +
+          "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+          '\r\n' +
+          '        \r\n' +
+          '        await badge.click();\r\n' +
+          "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+          "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+          '    }'
+      },
+      identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:29:47.739Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:49.685Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:53.655Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"04f0d059-d64d-42bd-ae76-b90b0b647fa6","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü","test_name":"S3: Sepete urun ekleme ve Badge kontrolü","test_code":"async () => {\r\n        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n        \r\n        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n        await addToCart.click();\r\n\r\n        const badge = await $('.shopping_cart_badge');\r\n        await badge.waitForDisplayed({ timeout: 5000 });\r\n        \r\n        await expect(badge).toHaveText('1');\r\n        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n\r\n        \r\n        await badge.click();\r\n        await expect($('.cart_item')).toBeDisplayed();\r\n        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:29:47.739Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:29:53.656Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:29:53.656Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '04f0d059-d64d-42bd-ae76-b90b0b647fa6',
+    name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+        '        \r\n' +
+        "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+        '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        await addToCart.click();\r\n' +
+        '\r\n' +
+        "        const badge = await $('.shopping_cart_badge');\r\n" +
+        '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '        \r\n' +
+        "        await expect(badge).toHaveText('1');\r\n" +
+        "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+        '\r\n' +
+        '        \r\n' +
+        '        await badge.click();\r\n' +
+        "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+        "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+        '    }'
+    },
+    identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 5917,
+    started_at: '2026-04-15T19:29:47.739Z',
+    finished_at: '2026-04-15T19:29:53.656Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:53.691Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '04f0d059-d64d-42bd-ae76-b90b0b647fa6',
+      name: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          "        await browser.takeProof('S3_1_Ekleme_Oncesi');\r\n" +
+          '        \r\n' +
+          "        const addToCart = await $('#add-to-cart-sauce-labs-backpack');\r\n" +
+          '        await addToCart.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        await addToCart.click();\r\n' +
+          '\r\n' +
+          "        const badge = await $('.shopping_cart_badge');\r\n" +
+          '        await badge.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '        \r\n' +
+          "        await expect(badge).toHaveText('1');\r\n" +
+          "        await browser.takeProof('S3_2_Urun_Eklendi_Badge_Guncel');\r\n" +
+          '\r\n' +
+          '        \r\n' +
+          '        await badge.click();\r\n' +
+          "        await expect($('.cart_item')).toBeDisplayed();\r\n" +
+          "        await browser.takeProof('S3_3_Sepet_Icerigi_Dogrulama');\r\n" +
+          '    }'
+      },
+      identifier: 'S3: Sepete urun ekleme ve Badge kontrolü',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S3: Sepete urun ekleme ve Badge kontrolü',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 5917,
+      started_at: '2026-04-15T19:29:47.739Z',
+      finished_at: '2026-04-15T19:29:53.656Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:53.692Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:29:57.526Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '4597a4a6-3f05-49f6-b214-40256279c848',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:29:57.527Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '4597a4a6-3f05-49f6-b214-40256279c848',
+    name: 'S4: Responsive gorunum ve Orientation kontrolu',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '        if (browser.isMobile) {\r\n' +
+        "            await browser.setOrientation('landscape');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+        '            \r\n' +
+        "            await browser.setOrientation('portrait');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+        '        } else {\r\n' +
+        '            await browser.setWindowSize(800, 600);\r\n' +
+        "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+        '        }\r\n' +
+        '    }'
+    },
+    identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:29:57.526Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:29:57.705Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '4597a4a6-3f05-49f6-b214-40256279c848',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '6915c5b10c166d021c4129b0c27eb3fb50e442d6',
+          capabilities: {
+            webStorageEnabled: false,
+            locationContextEnabled: false,
+            browserName: 'safari',
+            platform: 'MAC',
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            takesScreenshot: true,
+            networkConnectionEnabled: false,
+            platformName: 'iOS',
+            newCommandTimeout: 0,
+            realMobile: 'true',
+            deviceName: 'iPhone 14',
+            safariIgnoreFraudWarning: true,
+            orientation: 'PORTRAIT',
+            deviceOrientation: 'PORTRAIT',
+            noReset: true,
+            automationName: 'XCUITest',
+            keychainPath: '[REDACTED VALUE]',
+            keychainPassword: '[REDACTED VALUE]',
+            useXctestrunFile: true,
+            bootstrapPath: '/usr/local/.browserstack/config/wda_derived_data_16_3.2.0.10.23.2_515e29e8-234f-4a0f-a938-5ab844beed3d/Build/Products',
+            'browserstack.isTargetBased': 'true',
+            udid: '00008110-000E38A90EB9401E'
+          },
+          platform: 'iOS',
+          platform_version: '16',
+          browser: 'safari',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '4597a4a6-3f05-49f6-b214-40256279c848',
+      name: 'S4: Responsive gorunum ve Orientation kontrolu',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '        if (browser.isMobile) {\r\n' +
+          "            await browser.setOrientation('landscape');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+          '            \r\n' +
+          "            await browser.setOrientation('portrait');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+          '        } else {\r\n' +
+          '            await browser.setWindowSize(800, 600);\r\n' +
+          "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+          '        }\r\n' +
+          '    }'
+      },
+      identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:29:57.526Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:29:57.705Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:30:04.330Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"4597a4a6-3f05-49f6-b214-40256279c848","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu","test_name":"S4: Responsive gorunum ve Orientation kontrolu","test_code":"async () => {\r\n        if (browser.isMobile) {\r\n            await browser.setOrientation('landscape');\r\n            await browser.pause(1500);\r\n            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n            \r\n            await browser.setOrientation('portrait');\r\n            await browser.pause(1500);\r\n            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n        } else {\r\n            await browser.setWindowSize(800, 600);\r\n            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n        }\r\n    }","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:29:57.526Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:30:04.332Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:30:04.330Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '4597a4a6-3f05-49f6-b214-40256279c848',
+    name: 'S4: Responsive gorunum ve Orientation kontrolu',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '        if (browser.isMobile) {\r\n' +
+        "            await browser.setOrientation('landscape');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+        '            \r\n' +
+        "            await browser.setOrientation('portrait');\r\n" +
+        '            await browser.pause(1500);\r\n' +
+        "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+        '        } else {\r\n' +
+        '            await browser.setWindowSize(800, 600);\r\n' +
+        "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+        '        }\r\n' +
+        '    }'
+    },
+    identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 6806,
+    started_at: '2026-04-15T19:29:57.526Z',
+    finished_at: '2026-04-15T19:30:04.332Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:30:05.731Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '4597a4a6-3f05-49f6-b214-40256279c848',
+      name: 'S4: Responsive gorunum ve Orientation kontrolu',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '        if (browser.isMobile) {\r\n' +
+          "            await browser.setOrientation('landscape');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_1_Mobil_Yatay_Gorunum');\r\n" +
+          '            \r\n' +
+          "            await browser.setOrientation('portrait');\r\n" +
+          '            await browser.pause(1500);\r\n' +
+          "            await browser.takeProof('S4_2_Mobil_Dikey_Gorunum');\r\n" +
+          '        } else {\r\n' +
+          '            await browser.setWindowSize(800, 600);\r\n' +
+          "            await browser.takeProof('S4_1_Desktop_Kucuk_Ekran');\r\n" +
+          '        }\r\n' +
+          '    }'
+      },
+      identifier: 'S4: Responsive gorunum ve Orientation kontrolu',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S4: Responsive gorunum ve Orientation kontrolu',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 6806,
+      started_at: '2026-04-15T19:29:57.526Z',
+      finished_at: '2026-04-15T19:30:04.332Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:30:05.732Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:30:08.479Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: 'daaefc85-0828-4e23-b508-ce59870a0064',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:30:08.479Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'daaefc85-0828-4e23-b508-ce59870a0064',
+    name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    const size = await browser.getWindowSize();\r\n' +
+        '    const width = size.width;\r\n' +
+        '\r\n' +
+        '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+        '\r\n' +
+        "    const menuBtn = await $('.bm-burger-button');\r\n" +
+        '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await menuBtn.click();\r\n' +
+        '    } catch (e) {\r\n' +
+        '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(2000); \r\n' +
+        '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+        '\r\n' +
+        "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '    \r\n' +
+        '  \r\n' +
+        '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '    } catch (e) {\r\n' +
+        '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(1500); \r\n' +
+        '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+        '    \r\n' +
+        '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+        '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+        '}'
+    },
+    identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:30:08.477Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:30:09.733Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: 'daaefc85-0828-4e23-b508-ce59870a0064',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '6915c5b10c166d021c4129b0c27eb3fb50e442d6',
+          capabilities: {
+            webStorageEnabled: false,
+            locationContextEnabled: false,
+            browserName: 'safari',
+            platform: 'MAC',
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            takesScreenshot: true,
+            networkConnectionEnabled: false,
+            platformName: 'iOS',
+            newCommandTimeout: 0,
+            realMobile: 'true',
+            deviceName: 'iPhone 14',
+            safariIgnoreFraudWarning: true,
+            orientation: 'PORTRAIT',
+            deviceOrientation: 'PORTRAIT',
+            noReset: true,
+            automationName: 'XCUITest',
+            keychainPath: '[REDACTED VALUE]',
+            keychainPassword: '[REDACTED VALUE]',
+            useXctestrunFile: true,
+            bootstrapPath: '/usr/local/.browserstack/config/wda_derived_data_16_3.2.0.10.23.2_515e29e8-234f-4a0f-a938-5ab844beed3d/Build/Products',
+            'browserstack.isTargetBased': 'true',
+            udid: '00008110-000E38A90EB9401E'
+          },
+          platform: 'iOS',
+          platform_version: '16',
+          browser: 'safari',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'daaefc85-0828-4e23-b508-ce59870a0064',
+      name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    const size = await browser.getWindowSize();\r\n' +
+          '    const width = size.width;\r\n' +
+          '\r\n' +
+          '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+          '\r\n' +
+          "    const menuBtn = await $('.bm-burger-button');\r\n" +
+          '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await menuBtn.click();\r\n' +
+          '    } catch (e) {\r\n' +
+          '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(2000); \r\n' +
+          '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+          '\r\n' +
+          "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '    \r\n' +
+          '  \r\n' +
+          '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '    } catch (e) {\r\n' +
+          '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(1500); \r\n' +
+          '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+          '    \r\n' +
+          '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+          '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+          '}'
+      },
+      identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:30:08.477Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:30:09.733Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:30:17.017Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"daaefc85-0828-4e23-b508-ce59870a0064","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)","test_name":"S5: Responsive Layout Kontrolu (Her Adım SS)","test_code":"async () => {\r\n    const size = await browser.getWindowSize();\r\n    const width = size.width;\r\n\r\n    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n\r\n    const menuBtn = await $('.bm-burger-button');\r\n    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n    \r\n    try {\r\n        await menuBtn.click();\r\n    } catch (e) {\r\n        await browser.execute((el) => el.click(), menuBtn);\r\n    }\r\n    \r\n    await browser.pause(2000); \r\n    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n\r\n    const closeBtn = await $('#react-burger-cross-btn');\r\n    \r\n  \r\n    await closeBtn.waitForExist({ timeout: 5000 });\r\n    \r\n    try {\r\n        await browser.execute((el) => el.click(), closeBtn);\r\n    } catch (e) {\r\n        console.log(\"Normal click başarısız, menü açık kalmış olabilir.\");\r\n    }\r\n    \r\n    await browser.pause(1500); \r\n    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n    \r\n    await browser.execute(() => window.scrollTo(0, 500));\r\n    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n}","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:30:08.477Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:30:17.013Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:30:17.018Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: 'daaefc85-0828-4e23-b508-ce59870a0064',
+    name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    const size = await browser.getWindowSize();\r\n' +
+        '    const width = size.width;\r\n' +
+        '\r\n' +
+        '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+        '\r\n' +
+        "    const menuBtn = await $('.bm-burger-button');\r\n" +
+        '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await menuBtn.click();\r\n' +
+        '    } catch (e) {\r\n' +
+        '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(2000); \r\n' +
+        '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+        '\r\n' +
+        "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '    \r\n' +
+        '  \r\n' +
+        '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+        '    \r\n' +
+        '    try {\r\n' +
+        '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '    } catch (e) {\r\n' +
+        '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+        '    }\r\n' +
+        '    \r\n' +
+        '    await browser.pause(1500); \r\n' +
+        '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+        '    \r\n' +
+        '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+        '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+        '}'
+    },
+    identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 8536,
+    started_at: '2026-04-15T19:30:08.477Z',
+    finished_at: '2026-04-15T19:30:17.013Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:30:17.746Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: 'daaefc85-0828-4e23-b508-ce59870a0064',
+      name: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    const size = await browser.getWindowSize();\r\n' +
+          '    const width = size.width;\r\n' +
+          '\r\n' +
+          '    await browser.takeProof(`S5_1_Baslangic_${width}px`);\r\n' +
+          '\r\n' +
+          "    const menuBtn = await $('.bm-burger-button');\r\n" +
+          '    await menuBtn.waitForDisplayed({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await menuBtn.click();\r\n' +
+          '    } catch (e) {\r\n' +
+          '        await browser.execute((el) => el.click(), menuBtn);\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(2000); \r\n' +
+          '    await browser.takeProof(`S5_2_Menu_Acildi_${width}px`);\r\n' +
+          '\r\n' +
+          "    const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '    \r\n' +
+          '  \r\n' +
+          '    await closeBtn.waitForExist({ timeout: 5000 });\r\n' +
+          '    \r\n' +
+          '    try {\r\n' +
+          '        await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '    } catch (e) {\r\n' +
+          '        console.log("Normal click başarısız, menü açık kalmış olabilir.");\r\n' +
+          '    }\r\n' +
+          '    \r\n' +
+          '    await browser.pause(1500); \r\n' +
+          '    await browser.takeProof(`S5_3_Menu_Kapandi_${width}px`);\r\n' +
+          '    \r\n' +
+          '    await browser.execute(() => window.scrollTo(0, 500));\r\n' +
+          '    await browser.takeProof(`S5_4_Layout_Check_${width}px`);\r\n' +
+          '}'
+      },
+      identifier: 'S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S5: Responsive Layout Kontrolu (Her Adım SS)',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 8536,
+      started_at: '2026-04-15T19:30:08.477Z',
+      finished_at: '2026-04-15T19:30:17.013Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:30:17.746Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:30:20.805Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '74a4621e-3223-4884-9fe4-40542303690b',
+    integrations: { browserstack: [Object] }
+  }
+} to 23704:0
+2026-04-15T19:30:20.805Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '74a4621e-3223-4884-9fe4-40542303690b',
+    name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    if (browser.isMobile) {\r\n' +
+        "        await browser.setOrientation('landscape');\r\n" +
+        '        await browser.pause(2000); \r\n' +
+        '        \r\n' +
+        "        const logo = await $('.app_logo');\r\n" +
+        '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+        "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+        '\r\n' +
+        "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '        \r\n' +
+        '        if (await closeBtn.isExisting()) {\r\n' +
+        '            try {\r\n' +
+        '                \r\n' +
+        '                await closeBtn.click();\r\n' +
+        '            } catch (e) {\r\n' +
+        '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '            }\r\n' +
+        '            await browser.pause(1000);\r\n' +
+        '        }\r\n' +
+        '\r\n' +
+        "        await browser.setOrientation('portrait');\r\n" +
+        '        await browser.pause(1500);\r\n' +
+        "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+        '        \r\n' +
+        '    } else {\r\n' +
+        '        console.log("Desktop: S6 Atlandi.");\r\n' +
+        '    }\r\n' +
+        '}'
+    },
+    identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-04-15T19:30:20.801Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: undefined,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:30:21.751Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '74a4621e-3223-4884-9fe4-40542303690b',
+      integrations: {
+        browserstack: {
+          product: 'automate',
+          session_id: '6915c5b10c166d021c4129b0c27eb3fb50e442d6',
+          capabilities: {
+            webStorageEnabled: false,
+            locationContextEnabled: false,
+            browserName: 'safari',
+            platform: 'MAC',
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            takesScreenshot: true,
+            networkConnectionEnabled: false,
+            platformName: 'iOS',
+            newCommandTimeout: 0,
+            realMobile: 'true',
+            deviceName: 'iPhone 14',
+            safariIgnoreFraudWarning: true,
+            orientation: 'PORTRAIT',
+            deviceOrientation: 'PORTRAIT',
+            noReset: true,
+            automationName: 'XCUITest',
+            keychainPath: '[REDACTED VALUE]',
+            keychainPassword: '[REDACTED VALUE]',
+            useXctestrunFile: true,
+            bootstrapPath: '/usr/local/.browserstack/config/wda_derived_data_16_3.2.0.10.23.2_515e29e8-234f-4a0f-a938-5ab844beed3d/Build/Products',
+            'browserstack.isTargetBased': 'true',
+            udid: '00008110-000E38A90EB9401E'
+          },
+          platform: 'iOS',
+          platform_version: '16',
+          browser: 'safari',
+          browser_version: undefined
+        }
+      }
+    }
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '74a4621e-3223-4884-9fe4-40542303690b',
+      name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    if (browser.isMobile) {\r\n' +
+          "        await browser.setOrientation('landscape');\r\n" +
+          '        await browser.pause(2000); \r\n' +
+          '        \r\n' +
+          "        const logo = await $('.app_logo');\r\n" +
+          '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+          "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+          '\r\n' +
+          "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '        \r\n' +
+          '        if (await closeBtn.isExisting()) {\r\n' +
+          '            try {\r\n' +
+          '                \r\n' +
+          '                await closeBtn.click();\r\n' +
+          '            } catch (e) {\r\n' +
+          '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '            }\r\n' +
+          '            await browser.pause(1000);\r\n' +
+          '        }\r\n' +
+          '\r\n' +
+          "        await browser.setOrientation('portrait');\r\n" +
+          '        await browser.pause(1500);\r\n' +
+          "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+          '        \r\n' +
+          '    } else {\r\n' +
+          '        console.log("Desktop: S6 Atlandi.");\r\n' +
+          '    }\r\n' +
+          '}'
+      },
+      identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-04-15T19:30:20.801Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: undefined,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:30:21.752Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:30:30.798Z CLI warn [TEST REPORTING AND ANALYTICS:webdriverio:mocha]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  TestRunFinished: event={"test_framework_name":"WebdriverIO-mocha","test_framework_version":"9.26.1","test_logs":[],"test_hooks_finished":{},"test_hooks_started":{},"test_uuid":"74a4621e-3223-4884-9fe4-40542303690b","test_result":"passed","test_hook_last_started":"TestFrameworkState.TEST","test_id":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali","test_name":"S6: Cihazin yan cevrilme durumu dogrulanmali","test_code":"async () => {\r\n    if (browser.isMobile) {\r\n        await browser.setOrientation('landscape');\r\n        await browser.pause(2000); \r\n        \r\n        const logo = await $('.app_logo');\r\n        await logo.waitForDisplayed({ timeout: 5000 });\r\n        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n\r\n        const closeBtn = await $('#react-burger-cross-btn');\r\n        \r\n        if (await closeBtn.isExisting()) {\r\n            try {\r\n                \r\n                await closeBtn.click();\r\n            } catch (e) {\r\n                await browser.execute((el) => el.click(), closeBtn);\r\n            }\r\n            await browser.pause(1000);\r\n        }\r\n\r\n        await browser.setOrientation('portrait');\r\n        await browser.pause(1500);\r\n        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n        \r\n    } else {\r\n        console.log(\"Desktop: S6 Atlandi.\");\r\n    }\r\n}","test_file_path":"mobile\\tests\\specs\\caseStudy.js","test_location":"tests\\specs\\caseStudy.js","test_scope":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali","test_scopes":["Senior QA Case Study - Adim Adim İspatli Test Paketi"],"test_started_at":"2026-04-15T19:30:20.801Z","automate_session_name":"Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali","test_failure":null,"test_failure_reason":null,"test_failure_type":null,"test_ended_at":"2026-04-15T19:30:30.797Z","test_hook_last_finished":"TestFrameworkState.TEST","automate_session_status":"passed","test_deferred":true,"logs":[]}
+2026-04-15T19:30:30.799Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'WebdriverIO-mocha',
+    uuid: '74a4621e-3223-4884-9fe4-40542303690b',
+    name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    body: {
+      lang: 'ecmascript',
+      code: 'async () => {\r\n' +
+        '    if (browser.isMobile) {\r\n' +
+        "        await browser.setOrientation('landscape');\r\n" +
+        '        await browser.pause(2000); \r\n' +
+        '        \r\n' +
+        "        const logo = await $('.app_logo');\r\n" +
+        '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+        "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+        '\r\n' +
+        "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+        '        \r\n' +
+        '        if (await closeBtn.isExisting()) {\r\n' +
+        '            try {\r\n' +
+        '                \r\n' +
+        '                await closeBtn.click();\r\n' +
+        '            } catch (e) {\r\n' +
+        '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+        '            }\r\n' +
+        '            await browser.pause(1000);\r\n' +
+        '        }\r\n' +
+        '\r\n' +
+        "        await browser.setOrientation('portrait');\r\n" +
+        '        await browser.pause(1500);\r\n' +
+        "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+        '        \r\n' +
+        '    } else {\r\n' +
+        '        console.log("Desktop: S6 Atlandi.");\r\n' +
+        '    }\r\n' +
+        '}'
+    },
+    identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+    scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+    file_name: 'mobile\\tests\\specs\\caseStudy.js',
+    vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+    location: 'mobile\\tests\\specs\\caseStudy.js',
+    result: 'passed',
+    duration_in_ms: 9996,
+    started_at: '2026-04-15T19:30:20.801Z',
+    finished_at: '2026-04-15T19:30:30.797Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: { rerun_name: undefined },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: true,
+      app_automate: false
+    }
+  },
+  logs: []
+} to 23704:0
+2026-04-15T19:30:31.783Z CLI info [testhub:request-queue-handler]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Processing batch event [
+  {
+    event_type: 'TestRunFinished',
+    test_run: {
+      type: 'test',
+      framework: 'WebdriverIO-mocha',
+      uuid: '74a4621e-3223-4884-9fe4-40542303690b',
+      name: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      body: {
+        lang: 'ecmascript',
+        code: 'async () => {\r\n' +
+          '    if (browser.isMobile) {\r\n' +
+          "        await browser.setOrientation('landscape');\r\n" +
+          '        await browser.pause(2000); \r\n' +
+          '        \r\n' +
+          "        const logo = await $('.app_logo');\r\n" +
+          '        await logo.waitForDisplayed({ timeout: 5000 });\r\n' +
+          "        await browser.takeProof('S6_1_Yatay_Mod_Kontrol');\r\n" +
+          '\r\n' +
+          "        const closeBtn = await $('#react-burger-cross-btn');\r\n" +
+          '        \r\n' +
+          '        if (await closeBtn.isExisting()) {\r\n' +
+          '            try {\r\n' +
+          '                \r\n' +
+          '                await closeBtn.click();\r\n' +
+          '            } catch (e) {\r\n' +
+          '                await browser.execute((el) => el.click(), closeBtn);\r\n' +
+          '            }\r\n' +
+          '            await browser.pause(1000);\r\n' +
+          '        }\r\n' +
+          '\r\n' +
+          "        await browser.setOrientation('portrait');\r\n" +
+          '        await browser.pause(1500);\r\n' +
+          "        await browser.takeProof('S6_2_Dikey_Mod_Final');\r\n" +
+          '        \r\n' +
+          '    } else {\r\n' +
+          '        console.log("Desktop: S6 Atlandi.");\r\n' +
+          '    }\r\n' +
+          '}'
+      },
+      identifier: 'S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scope: 'Senior QA Case Study - Adim Adim İspatli Test Paketi - S6: Cihazin yan cevrilme durumu dogrulanmali',
+      scopes: [ 'Senior QA Case Study - Adim Adim İspatli Test Paketi' ],
+      file_name: 'mobile\\tests\\specs\\caseStudy.js',
+      vc_filepath: 'mobile\\mobile\\tests\\specs\\caseStudy.js',
+      location: 'mobile\\tests\\specs\\caseStudy.js',
+      result: 'passed',
+      duration_in_ms: 9996,
+      started_at: '2026-04-15T19:30:20.801Z',
+      finished_at: '2026-04-15T19:30:30.797Z',
+      failure: null,
+      failure_type: null,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: { rerun_name: undefined },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: true,
+        app_automate: false
+      }
+    },
+    logs: []
+  }
+] to 23704:0
+2026-04-15T19:30:31.783Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-04-15T19:30:32.886Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-04-15T19:30:32.889Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-04-15T19:30:33.335Z CLI info [testhub:module]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  stopBuild: xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq request={"finished_at":"2026-04-15T19:30:32.886Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-04-15T19:30:33.337Z CLI info  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-04-15T19:30:33.702Z CLI info [TEST REPORTING AND ANALYTICS:module]  [cihankiri_KSvWc3]  [xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq]  [aed10fdc-3df3-42ca-b16c-3e0ed20a0115]  Visit https://automation.browserstack.com/builds/xaewcxqa2p9odry9crwfo7cjsmuxdrko8vipdcfq to view build report, insights, and many more debugging information all at one place!
