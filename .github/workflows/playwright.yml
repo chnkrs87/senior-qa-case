@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: Playwright Automation Tests
 on:
   push:
     branches: [ main, master ]
@@ -26,10 +26,10 @@ jobs:
       - name: Run Playwright tests
         run: cd automation && npx playwright test
 
-      - name: Upload Custom Screenshots
+      - name: Upload Screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: manual-screenshots
+          name: screenshots
           path: automation/test-results/
           retention-days: 7
