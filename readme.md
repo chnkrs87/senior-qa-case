@@ -45,11 +45,17 @@ Bu proje; Web, API, Mobil ve Performans katmanlarında en güncel QA araç setle
 1. Temel Yazılım ve IDE Yapılandırması
 
     1.1. IDE: Visual Studio Code (VS Code)
+
     1.2. Önerilen Extension'lar: * ESLint & Prettier: Kod standartları ve formatlama için.
+
     1.3. Allure Handle: Raporları IDE üzerinden yönetmek için.
+
     1.4. Playwright Test: Playwright testlerini koşturmak ve debug etmek için.
+
     1.5. Thunder Client: (Opsiyonel) Hafif API isteklerini VS Code içinde test etmek için.
+
     1.6. Runtime: Node.js (v18+) & npm
+    
     1.7. Java SDK (JDK 11+): Allure Raporlama motorunun çalışması için zorunludur.
 
 2. Modül Bazlı Araç Setleri ve Platform Erişimi
