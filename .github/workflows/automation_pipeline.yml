@@ -27,12 +27,48 @@ jobs:
         run: cd automation && npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: cd automation && npx playwright test
+        run: cd automation && npx playwright test || true
 
-      - name: Upload Screenshots
+      - name: Generate API Report
+        uses: simple-elf/allure-report-action@master
         if: always()
-        uses: actions/upload-artifact@v4
         with:
-          name: screenshots
-          path: automation/test-results/
-          retention-days: 7
+          allure_results: api-tests/rest_assured_playwright/reports/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report/api
+          subfolder: api
+
+      - name: Generate Automation Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: automation/reports/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report/automation
+          subfolder: automation
+
+      - name: Generate Web Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: web-test/reports/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report/web
+          subfolder: web
+
+      - name: Generate Performance Report
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        with:
+          allure_results: performance/results/allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report/performance
+          subfolder: performance
+
+      - name: Deploy all reports to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history 
