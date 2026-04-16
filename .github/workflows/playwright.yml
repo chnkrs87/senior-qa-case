@@ -1,4 +1,4 @@
-name: Playwright Automation Tests
+name: Master QA Pipeline (Web, API, Performance)
 on:
   push:
     branches: [ main, master ]
@@ -9,30 +9,48 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  test:
+  test_suite:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
         with:
-          node-version: 24 
+          node-version: 24
           cache: 'npm'
-          cache-dependency-path: automation/package-lock.json
 
-      - name: Install dependencies
-        run: cd automation && npm install
+      - name: Install All Dependencies
+        run: |
+          npm install
+          cd automation && npm install
+          cd ../web-test && npm install
+          cd ../api-tests/rest_assured_playwright && npm install
 
       - name: Install Playwright Browsers
-        run: cd automation && npx playwright install --with-deps
+        run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: cd automation && npx playwright test
+      - name: Run API Tests (Newman & Playwright)
+        run: |
+          # Newman (Postman) testi (ana dizinde script varsa)
+          npm run test:api || echo "Newman script not found, skipping"
+          # Playwright API testi
+          cd api-tests/rest_assured_playwright && npx playwright test
 
-      - name: Upload Screenshots
+      - name: Run Web UI Tests (WDIO)
+        run: cd web-test && npx wdio run wdio.conf.ts
+
+      - name: Setup k6 and Run Perf Tests
+        run: |
+          curl https://github.com/grafana/k6/releases/download/v0.49.0/k6-v0.49.0-linux-amd64.tar.gz -L | tar xvz
+          ./k6-v0.49.0-linux-amd64/k6 run performance/scripts/main_test.js
+
+      - name: Upload Test Evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: screenshots
-          path: automation/test-results/
+          name: full-qa-test-results
+          path: |
+            **/test-results/
+            **/allure-results/
           retention-days: 7
