@@ -20,7 +20,7 @@ Bu proje kapsamındaki tüm test sonuçları otomatik olarak GitHub Pages üzeri
 
 🛠 **API Tests** | Playwright / Rest-Assured | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/api/)
 
-🌐 **Web Tests** | Playwright | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/web/)
+🌐 **Web Test (Cross-browser & Responsive)** | Playwright | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/web/)
 
 📱 **Automation** | Playwright Mobile | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
 
