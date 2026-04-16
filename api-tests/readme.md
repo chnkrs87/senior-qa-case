@@ -9,6 +9,10 @@ API katmanında güvenilirliği sağlamak amacıyla, kimlik doğrulama ve veri b
 •	Full CRUD Lifecycle: Rezervasyon oluşturma, görüntüleme, güncelleme ve silme döngüsü.
 •	Hata Yönetimi: Geçersiz yetki ve olmayan kayıtlar için negatif test senaryoları (403, 404).
 
+# 📊 Test Dashboard & Reports
+
+🛠 **API Tests** | Playwright / Rest-Assured | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/api/)
+
 🛠️ Kullanılan Araçlar ve Frameworkler
 
 Araç	Kapsam	Avantajı

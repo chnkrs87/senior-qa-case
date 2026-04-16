@@ -8,6 +8,10 @@ Bu modül, modern web uygulamaları için hız, kararlılık ve paralel koşum o
 •	Custom Screenshot Engine: Her test adımı için hiyerarşik ve senaryo bazlı isimlendirilmiş görsel kanıt sistemi.
 •	CI/CD Pipeline Entegrasyonu: GitHub Actions üzerinde Node.js 24 ortamında her push sonrası otomatik validasyon.
 
+# 📊 Test Dashboard & Reports
+
+📱 **Automation** | Playwright Mobile | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
+
 🛠️ Kurulum ve Çalıştırma
 
 1.	Bağımlılık Yönetimi:

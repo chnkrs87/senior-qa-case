@@ -14,7 +14,19 @@ Proje, her test katmanı için en optimize araçlar seçilerek modüler bir yap�
     Performance	        k6, JavaScript	                    Workload Modeling, Stress & Spike Testing
     Automation	        Playwright, GitHub Actions	        Page Object Model (POM), Pipeline as Code
 
-# 🎯 Temel Yetkinlik Göstergeleri (Key Achievements)
+# 📊 Test Dashboard & Reports
+
+Bu proje kapsamındaki tüm test sonuçları otomatik olarak GitHub Pages üzerinden yayınlanmaktadır:
+
+🛠 **API Tests** | Playwright / Rest-Assured | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/api/)
+
+🌐 **Web Tests** | Playwright | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/web/)
+
+📱 **Automation** | Playwright Mobile | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
+
+⚡ **Performance** | K6 Load Testing | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/performance/)
+
+# 🎯 Temel Yetkinlik (Key Achievements)
 
 1. Multi-Browser Coverage: Testlerin Chrome, Firefox ve Edge üzerinde paralel koşumu.
 2. Accessibility First: WCAG 2.1 AA standartlarının otomasyona entegrasyonu.

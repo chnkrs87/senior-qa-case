@@ -12,6 +12,10 @@ Stress Test	200	        10m	    Sistemin sınır değerlerini ve darboğaz tespi
 Spike Test	0→500→0	    3m	    Ani trafik şoklarına karşı esneklik kontrolü.	
 Soak Test	30	        30m	    Uzun süreli stabilite ve bellek sızıntısı analizi.	
 
+# 📊 Test Dashboard & Reports
+
+⚡ **Performance** | K6 Load Testing | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/performance/)
+
 📈 Performans Metrikleri ve Görsel Raporlama
 
 1. SLA Uyumluluğu (Response Time)
