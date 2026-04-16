@@ -1,0 +1,21 @@
+[
+  {
+    "any": [],
+    "all": [
+      {
+        "id": "page-has-heading-one",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "moderate",
+        "message": "Page must have a level-one heading"
+      }
+    ],
+    "none": [],
+    "impact": "moderate",
+    "html": "<html>",
+    "target": [
+      "html"
+    ],
+    "failureSummary": "Fix all of the following:\n  Page must have a level-one heading"
+  }
+]
