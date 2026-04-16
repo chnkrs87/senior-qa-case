@@ -3,7 +3,7 @@
 Bu depo, modern yazılım geliştirme yaşam döngüsünde (SDLC) uygulanan kapsamlı kalite güvence stratejilerini sergilemek amacıyla hazırlanmıştır. 
 Proje; Web, Mobil, API ve Performans katmanlarını kapsayan, CI/CD entegrasyonuna sahip uçtan uca bir test çözümüdür.
 
-# 🏗️ Proje Mimarisi ve Teknoloji Yığınları
+# 🏗️ Proje Mimarisi ve Teknolojisi
 
 Proje, her test katmanı için en optimize araçlar seçilerek modüler bir yapıda kurgulanmıştır:
 
