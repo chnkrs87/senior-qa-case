@@ -1,0 +1,104 @@
+[
+  {
+    "any": [
+      {
+        "id": "color-contrast",
+        "data": {
+          "fgColor": "#64728c",
+          "bgColor": "#e8eaef",
+          "contrastRatio": 4.03,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        },
+        "relatedNodes": [
+          {
+            "html": "<div data-v-8a31f039=\"\" data-v-0af708be=\"\" class=\"oxd-sheet oxd-sheet--rounded oxd-sheet--gutters oxd-sheet--gray-lighten-2 orangehrm-demo-credentials\">",
+            "target": [
+              ".oxd-sheet"
+            ]
+          }
+        ],
+        "impact": "serious",
+        "message": "Element has insufficient color contrast of 4.03 (foreground color: #64728c, background color: #e8eaef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+    ],
+    "all": [],
+    "none": [],
+    "impact": "serious",
+    "html": "<p data-v-7b563373=\"\" data-v-0af708be=\"\" class=\"oxd-text oxd-text--p\">Username : Admin</p>",
+    "target": [
+      ".oxd-sheet > p:nth-child(1)"
+    ],
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.03 (foreground color: #64728c, background color: #e8eaef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+  },
+  {
+    "any": [
+      {
+        "id": "color-contrast",
+        "data": {
+          "fgColor": "#64728c",
+          "bgColor": "#e8eaef",
+          "contrastRatio": 4.03,
+          "fontSize": "12.0pt (16px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        },
+        "relatedNodes": [
+          {
+            "html": "<div data-v-8a31f039=\"\" data-v-0af708be=\"\" class=\"oxd-sheet oxd-sheet--rounded oxd-sheet--gutters oxd-sheet--gray-lighten-2 orangehrm-demo-credentials\">",
+            "target": [
+              ".oxd-sheet"
+            ]
+          }
+        ],
+        "impact": "serious",
+        "message": "Element has insufficient color contrast of 4.03 (foreground color: #64728c, background color: #e8eaef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+    ],
+    "all": [],
+    "none": [],
+    "impact": "serious",
+    "html": "<p data-v-7b563373=\"\" data-v-0af708be=\"\" class=\"oxd-text oxd-text--p\">Password : admin123</p>",
+    "target": [
+      ".oxd-sheet > p:nth-child(2)"
+    ],
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.03 (foreground color: #64728c, background color: #e8eaef, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+  },
+  {
+    "any": [
+      {
+        "id": "color-contrast",
+        "data": {
+          "fgColor": "#ffffff",
+          "bgColor": "#ff7b1d",
+          "contrastRatio": 2.59,
+          "fontSize": "10.5pt (14px)",
+          "fontWeight": "normal",
+          "messageKey": null,
+          "expectedContrastRatio": "4.5:1"
+        },
+        "relatedNodes": [
+          {
+            "html": "<button data-v-10d463b7=\"\" data-v-0af708be=\"\" type=\"submit\" class=\"oxd-button oxd-button--medium oxd-button--main orangehrm-login-button\"><!----> Login <!----></button>",
+            "target": [
+              "button"
+            ]
+          }
+        ],
+        "impact": "serious",
+        "message": "Element has insufficient color contrast of 2.59 (foreground color: #ffffff, background color: #ff7b1d, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+      }
+    ],
+    "all": [],
+    "none": [],
+    "impact": "serious",
+    "html": "<button data-v-10d463b7=\"\" data-v-0af708be=\"\" type=\"submit\" class=\"oxd-button oxd-button--medium oxd-button--main orangehrm-login-button\"><!----> Login <!----></button>",
+    "target": [
+      "button"
+    ],
+    "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.59 (foreground color: #ffffff, background color: #ff7b1d, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+  }
+]

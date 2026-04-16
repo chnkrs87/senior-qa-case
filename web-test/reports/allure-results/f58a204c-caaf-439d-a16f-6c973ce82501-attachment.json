@@ -1,0 +1,202 @@
+[
+  {
+    "any": [
+      {
+        "id": "has-visible-text",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element does not have text that is visible to screen readers"
+      },
+      {
+        "id": "aria-label",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-label attribute does not exist or is empty"
+      },
+      {
+        "id": "aria-labelledby",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+      },
+      {
+        "id": "non-empty-title",
+        "data": {
+          "messageKey": "noAttr"
+        },
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element has no title attribute"
+      }
+    ],
+    "all": [],
+    "none": [
+      {
+        "id": "focusable-no-name",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element is in tab order and does not have accessible text"
+      }
+    ],
+    "impact": "serious",
+    "html": "<a data-v-0af708be=\"\" href=\"https://www.linkedin.com/company/orangehrm/mycompany/\" target=\"_blank\">",
+    "target": [
+      ".orangehrm-login-footer-sm > a:nth-child(1)"
+    ],
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+  },
+  {
+    "any": [
+      {
+        "id": "has-visible-text",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element does not have text that is visible to screen readers"
+      },
+      {
+        "id": "aria-label",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-label attribute does not exist or is empty"
+      },
+      {
+        "id": "aria-labelledby",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+      },
+      {
+        "id": "non-empty-title",
+        "data": {
+          "messageKey": "noAttr"
+        },
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element has no title attribute"
+      }
+    ],
+    "all": [],
+    "none": [
+      {
+        "id": "focusable-no-name",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element is in tab order and does not have accessible text"
+      }
+    ],
+    "impact": "serious",
+    "html": "<a data-v-0af708be=\"\" href=\"https://www.facebook.com/OrangeHRM/\" target=\"_blank\">",
+    "target": [
+      "a:nth-child(2)"
+    ],
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+  },
+  {
+    "any": [
+      {
+        "id": "has-visible-text",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element does not have text that is visible to screen readers"
+      },
+      {
+        "id": "aria-label",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-label attribute does not exist or is empty"
+      },
+      {
+        "id": "aria-labelledby",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+      },
+      {
+        "id": "non-empty-title",
+        "data": {
+          "messageKey": "noAttr"
+        },
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element has no title attribute"
+      }
+    ],
+    "all": [],
+    "none": [
+      {
+        "id": "focusable-no-name",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element is in tab order and does not have accessible text"
+      }
+    ],
+    "impact": "serious",
+    "html": "<a data-v-0af708be=\"\" href=\"https://twitter.com/orangehrm?lang=en\" target=\"_blank\">",
+    "target": [
+      "a:nth-child(3)"
+    ],
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+  },
+  {
+    "any": [
+      {
+        "id": "has-visible-text",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element does not have text that is visible to screen readers"
+      },
+      {
+        "id": "aria-label",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-label attribute does not exist or is empty"
+      },
+      {
+        "id": "aria-labelledby",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
+      },
+      {
+        "id": "non-empty-title",
+        "data": {
+          "messageKey": "noAttr"
+        },
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element has no title attribute"
+      }
+    ],
+    "all": [],
+    "none": [
+      {
+        "id": "focusable-no-name",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "serious",
+        "message": "Element is in tab order and does not have accessible text"
+      }
+    ],
+    "impact": "serious",
+    "html": "<a data-v-0af708be=\"\" href=\"https://www.youtube.com/c/OrangeHRMInc\" target=\"_blank\">",
+    "target": [
+      "a:nth-child(4)"
+    ],
+    "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+  }
+]

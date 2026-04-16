@@ -1,0 +1,21 @@
+[
+  {
+    "any": [],
+    "all": [
+      {
+        "id": "page-has-main",
+        "data": null,
+        "relatedNodes": [],
+        "impact": "moderate",
+        "message": "Document does not have a main landmark"
+      }
+    ],
+    "none": [],
+    "impact": "moderate",
+    "html": "<html>",
+    "target": [
+      "html"
+    ],
+    "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+  }
+]

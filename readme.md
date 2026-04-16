@@ -1,203 +1,119 @@
-# 🚀 Senior QA Engineering Case Study
+🏆 Senior Quality Assurance Case Study
 
-## 📂 Proje Yapisi
+Bu depo, modern yazılım geliştirme yaşam döngüsünde (SDLC) uygulanan kapsamlı kalite güvence stratejilerini sergilemek amacıyla hazırlanmıştır. 
+Proje; Web, Mobil, API ve Performans katmanlarını kapsayan, CI/CD entegrasyonuna sahip uçtan uca bir test çözümüdür.
 
-    - **`api-tests/`**: API koleksiyonlari ve dokumantasyonu.
-    - **`automation/`**: Web/API otomasyon calismalari (varsa).
-    - **`mobile/`**: Mobil uygulama test notlari ve cihaz spesifik gozlemler.
-    - **`performance/`**: k6 performans scriptleri ve detayli raporlar.
-    - **`test-cases/`**: Manuel test senaryolari ve Markdown formatinda Bug Raporlari.
+# 🏗️ Proje Mimarisi ve Teknoloji Yığınları
 
-# 1. Performans Test #
+Proje, her test katmanı için en optimize araçlar seçilerek modüler bir yapıda kurgulanmıştır:
 
-## 📊 Performans Test Analizi
+    Katman	            Araçlar	                            Mimari / Yaklaşım
+    Web UI Testing	    WebdriverIO, TypeScript, Axe-core	Cross-browser, Responsive, Accessibility Audit
+    Mobile Web	        WebdriverIO, BrowserStack	        Real Device (iOS/Android) W3C Cloud Testing
+    API Testing	        Postman, Playwright, Newman	        Request Chaining, CRUD Lifecycle, Schema Validation
+    Performance	        k6, JavaScript	                    Workload Modeling, Stress & Spike Testing
+    Automation	        Playwright, GitHub Actions	        Page Object Model (POM), Pipeline as Code
 
-    Sistemin dayanikliligini olcmek icin 4 asamali bir is yuku modeli (Workload Model) uygulanmistir.
+# 📂 Proje Yapısı (Directory Map)
 
-### ⚙️ Test Senaryolari ve Hedefler
+├── web-test/               # WebdriverIO - UI & Erişilebilirlik Testleri
+├── api-tests/              # Postman & Playwright API Testleri
+├── mobile/                 # Gerçek Cihaz Mobil Web Testleri (BrowserStack)
+├── automation/             # Playwright - Ana Otomasyon & POM Yapısı
+├── performance/            # k6 - Yük ve Dayanıklılık Testleri
+└── test-cases/             # Test Case Yazımı ve Manuel Test Senaryoları
 
-    | Test Turu | Yuk (VU) | Sure | Amac | Sonuc |
-    | :--- | :---: | :---: | :--- | :--- |
-    | **Load Test** | 50 | 5m | Normal trafik altinda baz performans olcumu. | ✅ Basarili |
-    | **Stress Test** | 200 | 10m | Sistemin sinir degerlerini ve darbogazlarini tespit. | ✅ Basarili |
-    | **Spike Test** | 0→500→0 | 3m | Ani trafik soklarina karsi esneklik ve toparlanma. | ⚠️ Risk Tespit Edildi |
-    | **Soak Test** | 30 | 30m | Uzun sureli yuk altinda stabilite ve bellek sizintisi. | ❌ Stabilite Sorunu |
+# 🎯 Temel Yetkinlik Göstergeleri (Key Achievements)
 
-### 📈 Gorsel Raporlar
+•	Multi-Browser Coverage: Testlerin Chrome, Firefox ve Edge üzerinde paralel koşumu.
+•	Accessibility First: WCAG 2.1 AA standartlarının otomasyona entegrasyonu.
+•	Resilience Engineering: Performans testleriyle sistemin "Breaking Point" analizi ve Self-healing kapasitesinin ölçümü.
+•	CI/CD Maturity: GitHub Actions üzerinden her push sonrası otomatik kalite kontrolü ve artifact yönetimi.
+•	Cloud Testing: Gerçek cihazlar üzerinde bulut tabanlı test yürütme yetkinliği.
 
-#### 1. Genel Metrikler ve SLA Uyumlulugu
+📑 Manuel Test ve Test Yönetimi
 
-    Sistem ortalama **107.10 ms** yanit suresi ile 2000ms olan SLA hedefinin cok altinda kalarak yuksek hizda performans sergilemistir.
-    ![Performans Metrikleri](performance/results/screenshots/report-001.png)
+Otomasyonun ötesinde, kalite süreçlerinin temel taşı olan manuel senaryolar manual-testing/ klasöründe yer almaktadır. Bu bölümde:
 
-#### 2. Test Yurutme Detaylari (Throughput)
+•	Boundary Value Analysis (BVA) ve Equivalence Partitioning teknikleri.
+•	Kritik yol (Critical Path) analizleri.
+•	Hata raporlama şablonları (Bug Reporting) bulunmaktadır.
 
-    Saniyede ortalama **128.39** istek islenmis, toplamda ~370 bin istek basariyla yonetilmistir.
-    ![Test Detaylari](performance/results/screenshots/report-002.png)
+💡 Neden Bu Stratejiyi Seçtim?
 
-#### 3. Basari Oranlari (Checks)
+Bu projenin temel felsefesi **"Doğru iş için doğru aracı seçmek"**tir.
 
-    Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike fazinda gozlemlenmistir.
-    ![Dogrulama Sonuclari](performance/results/screenshots/report-003.png)
+•	WebdriverIO, karmaşık web ve mobil entegrasyonlarındaki esnekliği için,
+•	Playwright, API ve hızlı otomasyon döngüleri için,
+•	k6, Go tabanlı yüksek performanslı yük testleri için tercih edilmiştir.
 
-## 🔍 Teknik Gozlemler ve Analiz (Senior Perspective)
+🛠️ Teknik Ekosistem ve Yazılım Gereksinimleri
 
-    1. **Breaking Point:** Sistem 200 VU (Stress) seviyesine kadar kusursuz calismaktadir. Ancak 500 VU (Spike) aninda TCP baglanti hatalari (`connectex`) uretmeye baslamistir.
-    2. **Recovery Failure:** Spike testi sonrasinda yuk 30 VU seviyesine (Soak) dusurulmesine ragmen hatalarin devam ettigi gozlemlenmistir. Bu durum, sistemin **Self-Healing** (kendi kendini iyilestirme) kapasitesinin zayif oldugunu ve kaynaklarin (Connection Pool) duzgun serbest birakilmadigini kanitlamaktadir.
-    3. **Resilience Risk:** Ani trafik artislari sonrasi sistemin manuel mudahale olmadan eski stabil haline donmemesi, prod ortami icin operasyonel bir risk teskil etmektedir.
+Bu proje; Web, API, Mobil ve Performans katmanlarında en güncel QA araç setlerini kullanmaktadır. Başarılı bir test koşumu için aşağıdaki bileşenlerin hazır olması gerekmektedir.
 
-### 🛠️ oneriler
+1. Temel Yazılım ve IDE Yapılandırması
 
-    - **Altyapi:** Veritabani ve uygulama sunucusu arasindaki baglanti havuzu (Connection Pooling) ayarlari optimize edilmeli.
-    - **olceklendirme:** HPA (Horizontal Pod Autoscaler) politikalari, CPU/RAM metriklerinin yani sira "Request per Second" bazli da tetiklenmeli.
-    - **Cache:** Ani yukleri karsilamak icin onbellekleme (Redis vb.) stratejileri devreye alinmali.
+•	IDE: Visual Studio Code (VS Code)
+•	Önerilen Extension'lar: * ESLint & Prettier: Kod standartları ve formatlama için.
+•	Allure Handle: Raporları IDE üzerinden yönetmek için.
+•	Playwright Test: Playwright testlerini koşturmak ve debug etmek için.
+•	Thunder Client: (Opsiyonel) Hafif API isteklerini VS Code içinde test etmek için.
+•	Runtime: Node.js (v18+) & npm
+•	Java SDK (JDK 11+): Allure Raporlama motorunun çalışması için zorunludur.
 
-## 🛠️ Kurulum ve calistirma
+2. Modül Bazlı Araç Setleri ve Platform Erişimi
 
-### Performans Testlerini Kosturmak icin:
-    1. [k6](https://k6.io/) aracini sisteminize kurun.
-    2. # Winget ile:
-        winget install k6
-    3. # Proje ana dizinindeyken asagidaki komutlarla gerekli klasorleri olusturabilirsiniz:
-        Performans klasoru ve alt dizinleri
-        mkdir -p performance/scripts
-        mkdir -p performance/results/screenshots
-    4. calistirma
-        k6 run performance/scripts/main_test.js
+A. Web & Mobil Test (UI Layer)
 
+•	Framework: WebdriverIO (v8) & Playwright.
+•	BrowserStack (Cloud Device Farm): * Gerçek iOS ve Android cihazlara erişim için browserstack.com hesabı gereklidir.
+•	Local Testing: Mobil tarayıcıları yerel ağda test etmek için BrowserStack Local binary yüklü olmalıdır.
+•	Axe-Core: Erişilebilirlik taramaları için WDIO entegrasyonu.
 
-# 2. Automation (Playwright) #
-    Cross-Browser Testing: Chromium ve Firefox uzerinde paralel kosum destegi.
+B. API Test Katmanı
 
-    Page Object Model (POM): Surdurulebilir ve moduler kod yapisi.
+•	Postman (Desktop App): Koleksiyonların manuel testi ve düzenlenmesi için.
+•	Newman (CLI): Postman koleksiyonlarını terminal üzerinden (CI/CD uyumlu) çalıştırmak için.
+•	Restful-Booker API: Testlerin koşturulduğu hedef platform (https://restful-booker.herokuapp.com)
 
-    Hiyerarsik Raporlama: Ekran goruntuleri test-results/ altinda tarayici ve senaryo bazli otomatik olarak siniflandirilir.
+C. Performans Test Katmanı
 
-    CI/CD Integration: Her push isleminde Node.js 24 ortaminda otomatik test kosumu ve artifact uretimi.
+•	k6 (by Grafana): Yüksek performanslı yük testleri için Go tabanlı CLI aracı.
+•	Kurulum (Windows): winget install k6
+•	Kurulum (Mac): brew install k6
 
-    Custom Screenshot Engine: Her test adimi icin ozel isimlendirilmis gorsel kanitlar.
+3. Adım Adım Kurulum (Step-by-Step Setup)
 
-## 🛠️ Kurulum ve calistirma
-    Bagimlilik Yonetimi: Proje kok dizininde gerekli kutuphaneler yuklenir.
+    3.1. Adım: Depo Hazırlığı
 
     Bash
-    cd automation
-    npm install
-    Tarayici Motorlari: Playwright'in ihtiyac duydugu izole tarayici paketleri sisteme tanimlanir.
+    git clone <repo-url>
+    cd senior-qa-case
+    npm install  # Tüm projenin ana bağımlılıklarını kurar
+
+    3.2. Adım: Driver ve Tarayıcı Motorları
+
+    Otomasyon motorlarının (Playwright) ihtiyaç duyduğu izole tarayıcı paketlerini sisteme tanımlayın:
 
     Bash
     npx playwright install --with-deps
-    🏃 Test Yurutme Stratejileri
-    Headless Kosum: Tum tarayicilarda (Chrome & Firefox) paralel testler baslatilir.
 
-    Bash
-    npx playwright test
+    3.3. Adım: Çevresel Değişkenlerin Yapılandırılması (.env)
 
-### CI/CD ve Raporlama
-    Proje, GitHub Actions ile tam entegre calismaktadir:
+    Projenin kök dizininde veya ilgili modül klasörlerinde bir .env dosyası oluşturun ve aşağıdaki anahtarları kendi bilgilerinizle doldurun:
 
-    Pipeline: Node.js 24 tabanli guncel runner yapisi kullanilmaktadir.
+    Kod snippet'i
+    BrowserStack Credentials
+    BROWSERSTACK_USERNAME=your_username
+    BROWSERSTACK_ACCESS_KEY=your_access_key
 
-    Artifacts: Test sonrasi olusan ekran goruntuleri GitHub uzerinden indirilebilir.
+    API Auth (Opsiyonel)
+    API_ADMIN_USER=admin
+    API_ADMIN_PASSWORD=password123
 
-    Allure Results: Detayli raporlama icin gerekli veri seti reports/allure-results altinda toplanir.
+4. Adım: Allure Raporlama Sistemini Aktif Etme
 
-#### Yerel Raporlama ve Kanit Yonetimi
-    Hiyerarsik Screenshot Sistemi: Testler bittiginde test-results/ klasoru altinda tarayici ve senaryo bazli .png ciktilari otomatik olarak siniflandirilir.
+Raporların görselleştirilmesi için Allure komut satırı aracının sistemde global olarak tanımlanması önerilir:
+Bash
+npm install -g allure-commandline
 
-    Allure Dashboard: Detayli analiz icin yerel raporlama sunucusu baslatilir.
-
-    Bash
-    npx allure serve reports/allure-results
-
-##### GitHub Entegrasyonu ve CI/CD Operasyon Sureci
-    Kodun paylasilan repoya aktarilmasiyla baslayan otomatik kalite kontrol hatti su sekilde islemektedir:
-
-    📂 Surum Kontrolu ve Filtreleme
-    Git Stratejisi: Gereksiz dosyalarin (node_modules, logs vb.) repoyu kirletmemesi icin .gitignore konfigurasyonu uygulanmistir.
-
-    Version Control: Yapilan degisiklikler GitHub Desktop veya Terminal uzerinden muhurlenerek uzak sunucuya gonderilir.
-
-    Bash
-    git add .
-    git commit -m "feat: setup automation and ci/cd pipeline"
-    git push origin main
-
-##### ⚡ GitHub Actions (Pipeline) Akisi
-    push islemiyle birlikte .github/workflows/playwright.yml dosyasi tetiklenir ve su surecleri yonetir:
-
-    calisma Ortami: GitHub Ubuntu Runner uzerinde Node.js 24 ortami hazirlanir.
-
-    Bulut Kosumu: Bagimliliklar kurulur ve testler "Headless" modda otomatik olarak calistirilir.
-
-    Artifact Arsivleme: Testler ister basarili ister hatali bitsin, olusan tum ekran goruntuleri GitHub uzerine yuklenir.
-
-    🔍 Bulut Kanitlarinin incelenmesi
-    GitHub uzerindeki Actions sekmesine gidilir.
-
-    ilgili "Workflow Run" secilerek sayfanin altindaki Artifacts bolumunden screenshots.zip indirilerek test kanitlari incelenir.
-
-###### Neden Playwright Tercih Edildi?
-
-    Bu projenin temel otomasyon motoru olarak Playwright'in secilme nedenleri, modern web uygulamalarinin test ihtiyaclarina sundugu ustun cozumlerdir
-
-    1. Hiz ve Paralel Kosum (Efficiency)
-    Playwright, "Browser Context" mimarisi sayesinde her test icin yeni bir tarayici acmak yerine, saniyeler icinde tertemiz bir tarayici profili olusturur. Bu da 24 test case'inin paralel olarak cok daha kisa surede tamamlanmasini saglar.
-
-    2. Otomatik Bekleme (Auto-Wait)
-    Selenium'un aksine, Playwright elemanlarin tiklanabilir veya gorunur olmasini otomatik olarak bekler. Bu ozellik, testlerin kararliligini artirarak "Flaky Test" (bir gecip bir kalan test) oranini minimize eder.
-
-    3. Gercek Cross-Browser Destegi
-    Tek bir API ile Chromium (Chrome, Edge), Firefox ve WebKit (Safari) uzerinde %100 uyumlulukla test kosulabilir. Bu projede hem Chromium hem de Firefox uzerinde ayni kodun kosturulmasi bu gucu gostermektedir.
-
-    4. Gelismis Debugging ve Trace Viewer
-    Playwright'in sundugu UI Mode ve Trace Viewer, hata aninda DOM'un o anki durumunu, ag (network) isteklerini ve konsol loglarini geriye donuk inceleme imkani verir. Bu, hata analiz suresini (MTTR) ciddi oranda dusurur.
-
-    5. Native Shadow DOM ve iframe Destegi
-    Modern web bilesenleri (Shadow DOM) ve karmasik iframe yapilari ile calisirken ek bir konfigurasyona ihtiyac duymadan dogrudan erisim saglar.
-
-# 3. API Test - Restful Booker #
-
-## 3. 1. Postman & Newman 
-
-    Restful-booker API üzerindeki 9 temel senaryo, bağımlı test zinciri (request chaining) mantığıyla kurgulanmıştır.
-
-    Klasör Yolu: api-tests/postman/
-
-    Kullanılan Araçlar: Postman, Newman, JavaScript
-
-    Test Kapsamı: Auth (Token generation), CRUD işlemleri (Create, Get, Update, Delete) ve Negatif senaryolar (403 Forbidden, 404 Not Found doğrulama).
-
-    🛠️ Çalıştırma Talimatı
-
-    Projenin ana dizininde aşağıdaki komutu çalıştırarak tüm API testlerini terminal üzerinden koşturabilirsiniz:
-
-    Bash
-
-    npm run test:api
-
-    (Bu komut arka planda newman run api-tests/postman/postman_collection.json -e api-tests/postman/postman_environment.json komutunu tetikler.)
-
-## 3.2. Playwright & TypeScript 
-
-    Teknik yetkinlik göstergesi olarak, aynı senaryolar modern bir framework olan Playwright ile de kodlanmıştır.
-
-    Klasör Yolu: api-tests/rest_assured_playwright/
-
-    Öne Çıkan Özellikler:
-
-    TypeScript ile tip güvenliği.
-
-    Allure Report entegrasyonu ile görsel raporlama.
-
-    Chain of Requests mimarisi.
-
-    🛠️ Çalıştırma ve Raporlama
-
-    Testleri koşturmak ve görsel raporu açmak için rest_assured_playwright klasörü içerisinde:
-
-    Bash
-
-    npx playwright test
-
-    npx allure serve reports/allure-results

@@ -1,7 +1,5 @@
 # 📱 Mobil Otomasyon Raporu
 
----
-
 ### 📸 Adım: S1_Login_Basarili_Kontrol
 - **Durum:** ONLINE | **Cihaz:** RFCW71G6WEK
 - ![Screenshot](./reports/screenshots/s1_login_basarili_kontrol_ONLINE_RFCW71G6WEK.png)
@@ -105,3 +103,23 @@
 ### 📸 Adım: S6_2_Dikey_Mod_Final
 - **Durum:** ONLINE | **Cihaz:** iPhone 14
 - ![Screenshot](./reports/screenshots/s6_2_dikey_mod_final_ONLINE_iPhone_14.png)
+
+#### ⚠️ Senaryo 7: Network Interruption (Ağ Kesintisi) Hakkında Teknik Not ####
+
+Projenin 7. senaryosu olan "İnternet kesildiğinde uygulamanın davranışı" testi, BrowserStack (Real Device Cloud) altyapısının teknik kısıtlamaları nedeniyle otomatize edilememiştir. Bunun nedenleri aşağıda teknik detaylarıyla açıklanmıştır:
+
+1. WebDriver Bağlantı Mimarisi (Protocol Dependency)
+
+Bulut tabanlı test platformlarında (BrowserStack, SauceLabs vb.), test kodumuz ile gerçek cihaz arasındaki iletişim WebDriver protokolü üzerinden sağlanır.
+
+    Cihazın internet bağlantısı (uçak modu veya network simülasyonu ile) tamamen kesildiğinde, cihazın Appium/WebDriver sunucusuyla olan bağı da kopmaktadır.
+
+    Bu durum, test kodunun cihaza komut gönderememesine ve "Session Not Found" veya "Request Timeout" hataları ile testin crash olmasına neden olmaktadır.
+
+2. CDP (Chrome DevTools Protocol) Kısıtları
+
+Local ortamlarda setNetworkConditions gibi komutlarla tarayıcıyı "Offline" moduna sokmak mümkündür. Ancak gerçek mobil cihazlarda (iOS Safari ve Android Chrome):
+
+    iOS Safari: Apple'ın güvenlik duvarı ve WebDriver limitleri nedeniyle tarayıcı düzeyinde bir network manipülasyonuna izin vermemektedir.
+
+    Android: Gerçek cihazlarda network simülasyonu, cihazın tüm veri akışını kestiği için Appium komutlarını da engellemektedir.
