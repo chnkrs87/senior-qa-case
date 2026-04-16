@@ -127,15 +127,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 # 5. Bug Report: BUG-005 – Performance problem
 
     •	Bulgu ID: BUG-005
