@@ -59,9 +59,12 @@ jobs:
       - name: Copy Performance HTML to Deploy folder
         if: always()
         run: |
-          mkdir -p allure-history/performance
-          # summary.html dosyasını belirttiğin yoldan alıp hedef klasöre index.html olarak kopyalar
-          cp performance/results/summary.html allure-history/performance/index.html 2>/dev/null || true
+          # İzin hatasini sudo ile asiyoruz ve klasörü olusturuyoruz
+          sudo mkdir -p allure-history/performance
+          # summary.html dosyasini hedef klasöre index.html olarak kopyaliyoruz
+          sudo cp performance/results/summary.html allure-history/performance/index.html 2>/dev/null || true
+          # Sahipliği tekrar runner kullanicisina veriyoruz
+          sudo chown -R runner:docker allure-history
 
       - name: Deploy all reports to Github Pages
         if: always()
