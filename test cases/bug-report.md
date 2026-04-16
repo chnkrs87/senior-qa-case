@@ -11,8 +11,7 @@
     
     •	TC : TC-0010-Login-Şifre alanı karakter sınırı doğrulaması
 
-    •	Screen Shot: senior-qa-case\test cases\bug-screenshots\bug-001-ss-001.png
-        ![Screenshot](./reports/screenshots/s1_login_basarili_kontrol_ONLINE_RFCW71G6WEK.png)
+    •	![Screenshot](senior-qa-case/test%20cases/bug-screenshots/bug-001-ss-001.png)
 
     1. Özet: Login sayfasındaki şifre giriş alanında herhangi bir karakter sınırlaması (maxlength attribute) bulunmamaktadır. Kullanıcı bu alana sınırsız uzunlukta veri girebilmektedir.
     2. Yeniden Üretme Adımları (Steps to Reproduce):
