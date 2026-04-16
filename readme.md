@@ -2,51 +2,55 @@
 
 ## 📂 Proje Yapisi
 
-- **`api-tests/`**: API koleksiyonlari ve dokumantasyonu.
-- **`automation/`**: Web/API otomasyon calismalari (varsa).
-- **`mobile/`**: Mobil uygulama test notlari ve cihaz spesifik gozlemler.
-- **`performance/`**: k6 performans scriptleri ve detayli raporlar.
-- **`test-cases/`**: Manuel test senaryolari ve Markdown formatinda Bug Raporlari.
+    - **`api-tests/`**: API koleksiyonlari ve dokumantasyonu.
+    - **`automation/`**: Web/API otomasyon calismalari (varsa).
+    - **`mobile/`**: Mobil uygulama test notlari ve cihaz spesifik gozlemler.
+    - **`performance/`**: k6 performans scriptleri ve detayli raporlar.
+    - **`test-cases/`**: Manuel test senaryolari ve Markdown formatinda Bug Raporlari.
 
 # 1. Performans Test #
 
 ## 📊 Performans Test Analizi
 
-Sistemin dayanikliligini olcmek icin 4 asamali bir is yuku modeli (Workload Model) uygulanmistir.
+    Sistemin dayanikliligini olcmek icin 4 asamali bir is yuku modeli (Workload Model) uygulanmistir.
 
 ### ⚙️ Test Senaryolari ve Hedefler
 
-| Test Turu | Yuk (VU) | Sure | Amac | Sonuc |
-| :--- | :---: | :---: | :--- | :--- |
-| **Load Test** | 50 | 5m | Normal trafik altinda baz performans olcumu. | ✅ Basarili |
-| **Stress Test** | 200 | 10m | Sistemin sinir degerlerini ve darbogazlarini tespit. | ✅ Basarili |
-| **Spike Test** | 0→500→0 | 3m | Ani trafik soklarina karsi esneklik ve toparlanma. | ⚠️ Risk Tespit Edildi |
-| **Soak Test** | 30 | 30m | Uzun sureli yuk altinda stabilite ve bellek sizintisi. | ❌ Stabilite Sorunu |
+    | Test Turu | Yuk (VU) | Sure | Amac | Sonuc |
+    | :--- | :---: | :---: | :--- | :--- |
+    | **Load Test** | 50 | 5m | Normal trafik altinda baz performans olcumu. | ✅ Basarili |
+    | **Stress Test** | 200 | 10m | Sistemin sinir degerlerini ve darbogazlarini tespit. | ✅ Basarili |
+    | **Spike Test** | 0→500→0 | 3m | Ani trafik soklarina karsi esneklik ve toparlanma. | ⚠️ Risk Tespit Edildi |
+    | **Soak Test** | 30 | 30m | Uzun sureli yuk altinda stabilite ve bellek sizintisi. | ❌ Stabilite Sorunu |
 
 ### 📈 Gorsel Raporlar
 
 #### 1. Genel Metrikler ve SLA Uyumlulugu
-Sistem ortalama **107.10 ms** yanit suresi ile 2000ms olan SLA hedefinin cok altinda kalarak yuksek hizda performans sergilemistir.
-![Performans Metrikleri](performance/results/screenshots/report-001.png)
+
+    Sistem ortalama **107.10 ms** yanit suresi ile 2000ms olan SLA hedefinin cok altinda kalarak yuksek hizda performans sergilemistir.
+    ![Performans Metrikleri](performance/results/screenshots/report-001.png)
 
 #### 2. Test Yurutme Detaylari (Throughput)
-Saniyede ortalama **128.39** istek islenmis, toplamda ~370 bin istek basariyla yonetilmistir.
-![Test Detaylari](performance/results/screenshots/report-002.png)
+
+    Saniyede ortalama **128.39** istek islenmis, toplamda ~370 bin istek basariyla yonetilmistir.
+    ![Test Detaylari](performance/results/screenshots/report-002.png)
 
 #### 3. Basari Oranlari (Checks)
-Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike fazinda gozlemlenmistir.
-![Dogrulama Sonuclari](performance/results/screenshots/report-003.png)
+
+    Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike fazinda gozlemlenmistir.
+    ![Dogrulama Sonuclari](performance/results/screenshots/report-003.png)
 
 ## 🔍 Teknik Gozlemler ve Analiz (Senior Perspective)
 
-1. **Breaking Point:** Sistem 200 VU (Stress) seviyesine kadar kusursuz calismaktadir. Ancak 500 VU (Spike) aninda TCP baglanti hatalari (`connectex`) uretmeye baslamistir.
-2. **Recovery Failure:** Spike testi sonrasinda yuk 30 VU seviyesine (Soak) dusurulmesine ragmen hatalarin devam ettigi gozlemlenmistir. Bu durum, sistemin **Self-Healing** (kendi kendini iyilestirme) kapasitesinin zayif oldugunu ve kaynaklarin (Connection Pool) duzgun serbest birakilmadigini kanitlamaktadir.
-3. **Resilience Risk:** Ani trafik artislari sonrasi sistemin manuel mudahale olmadan eski stabil haline donmemesi, prod ortami icin operasyonel bir risk teskil etmektedir.
+    1. **Breaking Point:** Sistem 200 VU (Stress) seviyesine kadar kusursuz calismaktadir. Ancak 500 VU (Spike) aninda TCP baglanti hatalari (`connectex`) uretmeye baslamistir.
+    2. **Recovery Failure:** Spike testi sonrasinda yuk 30 VU seviyesine (Soak) dusurulmesine ragmen hatalarin devam ettigi gozlemlenmistir. Bu durum, sistemin **Self-Healing** (kendi kendini iyilestirme) kapasitesinin zayif oldugunu ve kaynaklarin (Connection Pool) duzgun serbest birakilmadigini kanitlamaktadir.
+    3. **Resilience Risk:** Ani trafik artislari sonrasi sistemin manuel mudahale olmadan eski stabil haline donmemesi, prod ortami icin operasyonel bir risk teskil etmektedir.
 
 ### 🛠️ oneriler
-- **Altyapi:** Veritabani ve uygulama sunucusu arasindaki baglanti havuzu (Connection Pooling) ayarlari optimize edilmeli.
-- **olceklendirme:** HPA (Horizontal Pod Autoscaler) politikalari, CPU/RAM metriklerinin yani sira "Request per Second" bazli da tetiklenmeli.
-- **Cache:** Ani yukleri karsilamak icin onbellekleme (Redis vb.) stratejileri devreye alinmali.
+
+    - **Altyapi:** Veritabani ve uygulama sunucusu arasindaki baglanti havuzu (Connection Pooling) ayarlari optimize edilmeli.
+    - **olceklendirme:** HPA (Horizontal Pod Autoscaler) politikalari, CPU/RAM metriklerinin yani sira "Request per Second" bazli da tetiklenmeli.
+    - **Cache:** Ani yukleri karsilamak icin onbellekleme (Redis vb.) stratejileri devreye alinmali.
 
 ## 🛠️ Kurulum ve calistirma
 
@@ -76,18 +80,18 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
 ## 🛠️ Kurulum ve calistirma
     Bagimlilik Yonetimi: Proje kok dizininde gerekli kutuphaneler yuklenir.
 
-        Bash
-        cd automation
-        npm install
-        Tarayici Motorlari: Playwright'in ihtiyac duydugu izole tarayici paketleri sisteme tanimlanir.
+    Bash
+    cd automation
+    npm install
+    Tarayici Motorlari: Playwright'in ihtiyac duydugu izole tarayici paketleri sisteme tanimlanir.
 
-        Bash
-        npx playwright install --with-deps
-        🏃 Test Yurutme Stratejileri
-        Headless Kosum: Tum tarayicilarda (Chrome & Firefox) paralel testler baslatilir.
+    Bash
+    npx playwright install --with-deps
+    🏃 Test Yurutme Stratejileri
+    Headless Kosum: Tum tarayicilarda (Chrome & Firefox) paralel testler baslatilir.
 
-        Bash
-        npx playwright test
+    Bash
+    npx playwright test
 
 ### CI/CD ve Raporlama
     Proje, GitHub Actions ile tam entegre calismaktadir:
@@ -134,7 +138,8 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
     ilgili "Workflow Run" secilerek sayfanin altindaki Artifacts bolumunden screenshots.zip indirilerek test kanitlari incelenir.
 
 ###### Neden Playwright Tercih Edildi?
-    Bu projenin temel otomasyon motoru olarak Playwright'in secilme nedenleri, modern web uygulamalarinin test ihtiyaclarina sundugu ustun cozumlerdir:
+
+    Bu projenin temel otomasyon motoru olarak Playwright'in secilme nedenleri, modern web uygulamalarinin test ihtiyaclarina sundugu ustun cozumlerdir
 
     1. Hiz ve Paralel Kosum (Efficiency)
     Playwright, "Browser Context" mimarisi sayesinde her test icin yeni bir tarayici acmak yerine, saniyeler icinde tertemiz bir tarayici profili olusturur. Bu da 24 test case'inin paralel olarak cok daha kisa surede tamamlanmasini saglar.
@@ -154,37 +159,45 @@ Toplam basari orani **%99.29** olarak gerceklesmistir. 1,315 adet hata Spike faz
 # 3. API Test - Restful Booker #
 
 ## 3. 1. Postman & Newman 
-Restful-booker API üzerindeki 9 temel senaryo, bağımlı test zinciri (request chaining) mantığıyla kurgulanmıştır.
 
-Klasör Yolu: api-tests/postman/
+    Restful-booker API üzerindeki 9 temel senaryo, bağımlı test zinciri (request chaining) mantığıyla kurgulanmıştır.
 
-Kullanılan Araçlar: Postman, Newman, JavaScript
+    Klasör Yolu: api-tests/postman/
 
-Test Kapsamı: Auth (Token generation), CRUD işlemleri (Create, Get, Update, Delete) ve Negatif senaryolar (403 Forbidden, 404 Not Found doğrulama).
+    Kullanılan Araçlar: Postman, Newman, JavaScript
 
-🛠️ Çalıştırma Talimatı
-Projenin ana dizininde aşağıdaki komutu çalıştırarak tüm API testlerini terminal üzerinden koşturabilirsiniz:
+    Test Kapsamı: Auth (Token generation), CRUD işlemleri (Create, Get, Update, Delete) ve Negatif senaryolar (403 Forbidden, 404 Not Found doğrulama).
 
-Bash
-npm run test:api
-(Bu komut arka planda newman run api-tests/postman/postman_collection.json -e api-tests/postman/postman_environment.json komutunu tetikler.)
+    🛠️ Çalıştırma Talimatı
+
+    Projenin ana dizininde aşağıdaki komutu çalıştırarak tüm API testlerini terminal üzerinden koşturabilirsiniz:
+
+    Bash
+
+    npm run test:api
+
+    (Bu komut arka planda newman run api-tests/postman/postman_collection.json -e api-tests/postman/postman_environment.json komutunu tetikler.)
 
 ## 3.2. Playwright & TypeScript 
-Teknik yetkinlik göstergesi olarak, aynı senaryolar modern bir framework olan Playwright ile de kodlanmıştır.
 
-Klasör Yolu: api-tests/rest_assured_playwright/
+    Teknik yetkinlik göstergesi olarak, aynı senaryolar modern bir framework olan Playwright ile de kodlanmıştır.
 
-Öne Çıkan Özellikler:
+    Klasör Yolu: api-tests/rest_assured_playwright/
 
-TypeScript ile tip güvenliği.
+    Öne Çıkan Özellikler:
 
-Allure Report entegrasyonu ile görsel raporlama.
+    TypeScript ile tip güvenliği.
 
-Chain of Requests mimarisi.
+    Allure Report entegrasyonu ile görsel raporlama.
 
-🛠️ Çalıştırma ve Raporlama
-Testleri koşturmak ve görsel raporu açmak için rest_assured_playwright klasörü içerisinde:
+    Chain of Requests mimarisi.
 
-Bash
-npx playwright test
-npx allure serve reports/allure-results
+    🛠️ Çalıştırma ve Raporlama
+
+    Testleri koşturmak ve görsel raporu açmak için rest_assured_playwright klasörü içerisinde:
+
+    Bash
+
+    npx playwright test
+
+    npx allure serve reports/allure-results
