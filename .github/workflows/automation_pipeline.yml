@@ -56,14 +56,12 @@ jobs:
           allure_report: allure-report/web
           subfolder: web
 
-      - name: Generate Performance Report
-        uses: simple-elf/allure-report-action@master
+      - name: Copy Performance HTML to Deploy folder
         if: always()
-        with:
-          allure_results: performance/results/allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report/performance
-          subfolder: performance
+        run: |
+          mkdir -p allure-history/performance
+          # summary.html dosyasını belirttiğin yoldan alıp hedef klasöre index.html olarak kopyalar
+          cp performance/results/summary.html allure-history/performance/index.html 2>/dev/null || true
 
       - name: Deploy all reports to Github Pages
         if: always()
@@ -71,4 +69,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history 
+          publish_dir: allure-history
