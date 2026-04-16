@@ -36,7 +36,9 @@ Bu proje kapsamındaki tüm test sonuçları otomatik olarak GitHub Pages üzeri
 
 📑 Manuel Test ve Test Yönetimi
 
-Otomasyonun ötesinde, kalite süreçlerinin temel taşı olan manuel senaryolar manual-testing/ klasöründe yer almaktadır. Bu bölümde:
+Otomasyonun ötesinde, kalite süreçlerinin temel taşı olan manuel senaryolar tests/ klasöründe yer almaktadır. 
+
+Bu bölümde:
 
 1. Boundary Value Analysis (BVA) ve Equivalence Partitioning teknikleri.
 2. Kritik yol (Critical Path) analizleri.
