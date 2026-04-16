@@ -36,7 +36,7 @@ Bu proje kapsamındaki tüm test sonuçları otomatik olarak GitHub Pages üzeri
 
 📑 Manuel Test ve Test Yönetimi
 
-Otomasyonun ötesinde, kalite süreçlerinin temel taşı olan manuel senaryolar tests/ klasöründe yer almaktadır. 
+Otomasyonun ötesinde, kalite süreçlerinin temel taşı olan manuel senaryolar test-cases/ klasöründe yer almaktadır. 
 
 Bu bölümde:
 
@@ -45,8 +45,6 @@ Bu bölümde:
 3. Hata raporlama şablonları (Bug Reporting) bulunmaktadır.
 
 💡 Neden Bu Stratejiyi Seçtim?
-
-Bu projenin temel felsefesi **"Doğru iş için doğru aracı seçmek"**tir.
 
 1. WebdriverIO, karmaşık web ve mobil entegrasyonlarındaki esnekliği için,
 2. Playwright, API ve hızlı otomasyon döngüleri için,
