@@ -289,9 +289,43 @@
 
 5.	Teknik Not: Bu hata genellikle bir "Z-index" çakışmasından veya görünmez bir div katmanının butonun önünde yer almasından kaynaklanır.
 
-# 10. Bug Report: BUG-010 - 
+# 10. Bug Report: BUG-010 - Unability to Enter "Last Name" During Checkout
 
+Bulgu ID: BUG-010
 
+Bulgu Başlığı: Checkout aşamasında "Last Name" alanına veri girişi yapılamaması.
+
+Modül: Ödeme / Checkout Akışı
+
+Öncelik (Priority): High (P1)
+
+Ciddiyet (Severity): Blocker (Form gönderimi tamamlanamıyor)
+
+TC: TC-0044-Ödeme / Checkout Akışı-Hatalı Form Gönderimi (Error User)
+
+![Screenshot](bug-screenshots/bug-010-ss-001.png)
+
+1. Özet: "error_user" oturumu ile gerçekleştirilen checkout işleminde, "Last Name" input alanı kullanıcı girişine kapalıdır veya girilen veriyi kabul etmemektedir.
+
+2. Yeniden Üretme Adımları:
+
+    2.1. https://www.saucedemo.com adresine gidilir.
+
+    2.2. error_user kullanıcı adı ve secret_sauce şifresi ile giriş yapılır.
+
+    2.3. Herhangi bir ürün sepete eklenir ve sepet ikonuna tıklanır.
+
+    2.4. "Checkout" butonuna basılır.
+
+    2.5. "First Name" alanı doldurulur.
+
+    2.6. "Last Name" alanına veri girişi yapılmaya çalışılır.
+
+3. Beklenen Sonuç: "Last Name" alanına metin girişi yapılabilmesi ve girilen karakterlerin alanda görünmesi.
+
+4. Gerçekleşen Sonuç: "Last Name" alanına odaklanılmasına veya klavye girişi yapılmasına rağmen hiçbir karakter girişi yapılamadığı görüldü (Alan kilitli veya "Failed" statüsünde).
+
+5. Risk: Kullanıcılar soyadı bilgisini giremedikleri için ödeme adımına soyadı olmadan geçemekte. Bu durum sipariş takibini zorlaştırır.
 
 
 # 11. Bug Report: BUG-011 - Sort Functionality Failure (Visual User)
@@ -323,3 +357,179 @@
 
 4.	Gerçekleşen Sonuç: Liste sıralaması güncellenmemektedir.
 
+# 12. Bug Report: BUG-012 - Missing Validation Errors for Mandatory Fields at Checkout
+
+Bulgu ID: BUG-012
+
+Bulgu Başlığı: Checkout formunda boş bırakılan Last Name zorunlu alanı için hata mesajı/uyarı gösterilmemesi.
+
+Modül: Ödeme / Checkout Akışı
+
+Öncelik (Priority): Medium (P2)
+
+Ciddiyet (Severity): Major (Veri bütünlüğü ve validasyon hatası)
+
+TC: TC-0044-Ödeme / Checkout Akışı-Hatalı Form Gönderimi (Error User)
+
+![Screenshot](bug-screenshots/bug-012-ss-001.png)
+![Screenshot](bug-screenshots/bug-012-ss-002.png)
+![Screenshot](bug-screenshots/bug-012-ss-003.png)
+![Screenshot](bug-screenshots/bug-012-ss-004.png)
+
+1. Özet: "error_user" oturumunda, Checkout aşamasındaki zorunlu alanlar (First Name, Last Name, Zip/Postal Code) boş bırakılarak form gönderilmeye çalışıldığında, sistem kullanıcıya herhangi bir hata uyarısı göstermemektedir.
+
+2. Yeniden Üretme Adımları:
+
+    2.1. https://www.saucedemo.com adresine gidilir.
+
+    2.2. error_user ile giriş yapılır.
+
+    2.3. Sepete ürün eklenir ve Checkout sayfasına gidilir.
+
+    2.4. "Last Name" alanı tamamen boş bırakılır.
+
+    2.5. "Continue" (Devam) butonuna tıklanır.
+
+    2.6.Sayfada bir uyarı mesajı çıkıp çıkmadığı kontrol edilir.
+
+3. Beklenen Sonuç: Formun gönderilmemesi ve boş bırakılan alanlar için "First Name is required" gibi belirgin bir zorunluluk (validation) uyarısının çıkması.
+
+4. Gerçekleşen Sonuç: Zorunluluk uyarısının çıkmadığı görüldü; sistem hatalı/boş girişe tepki vermiyor.
+
+5. Risk: Geçersiz veya eksik verilerle sipariş oluşturulmasına zemin hazırlar. Kullanıcı deneyimi açısından kafa karıştırıcıdır ve veritabanında eksik kayıt oluşmasına veya sistemin ilerleyen aşamalarda çökmesine neden olabilir.
+
+
+
+# 13. Bug Report: BUG-013 - Checkout Proceeding Despite Missing Mandatory "Last Name" Field
+
+Bulgu ID: BUG-013
+
+Bulgu Başlığı: "Last Name" alanı boş olmasına rağmen sistemin bir sonraki checkout aşamasına geçişe izin vermesi.
+
+Modül: Ödeme / Checkout Akışı
+
+Öncelik (Priority): High (P1)
+
+Ciddiyet (Severity): Critical (İş mantığı ve veri bütünlüğü ihlali)
+
+TC: TC-0044-Ödeme / Checkout Akışı-Hatalı Form Gönderimi (Error User)
+
+![Screenshot](bug-screenshots/bug-013-ss-001.png)
+![Screenshot](bug-screenshots/bug-013-ss-002.png)
+
+1. Özet: "error_user" ile yapılan testte, "Last Name" alanına (BUG-008 nedeniyle) veri girişi yapılamamasına ve alanın boş kalmasına rağmen, "Continue" butonuna basıldığında sistemin hata vermesi gerekirken bir sonraki ödeme onay sayfasına ilerlediği tespit edilmiştir.
+
+2. Yeniden Üretme Adımları:
+
+    2.1. https://www.saucedemo.com adresine gidilir.
+
+    2.2. error_user bilgileriyle giriş yapılır.
+
+    2.3. Ürün sepete eklenir ve Checkout sayfasına gidilir.
+
+    2.4. "First Name" ve "Zip/Postal Code" alanları geçerli verilerle doldurulur.
+
+    2.5. "Last Name" alanı boş bırakılır (veya BUG-008 nedeniyle veri girilemediği teyit edilir).
+
+    2.6. "Continue" butonuna tıklanır.
+
+    2.7. Uygulamanın bir sonraki sayfaya geçip geçmediği gözlemlenir.
+
+3. Beklenen Sonuç: Eksik zorunlu alan (Last Name) nedeniyle formun reddedilmesi, kullanıcıya hata mesajı gösterilmesi ve aynı sayfada kalınması.
+
+4. Gerçekleşen Sonuç: Zorunlu alan boş olmasına rağmen sistemin hata vermediği ve Checkout sayfasına (Ödeme Özet sayfasına) başarıyla geçildiği görüldü.
+
+5. Risk: Veritabanında soyadı bilgisi eksik olan hatalı siparişlerin oluşmasına neden olur. Finansal kayıtlar ve kargo süreçleri için kritik olan zorunlu alan kontrolü (Server-side/Client-side validation) tamamen devre dışı kalmış durumdadır.
+
+# 14. Bug Report: BUG-014 - Missing Character Limit for "First Name" Field
+
+Bulgu ID: BUG-014
+
+Bulgu Başlığı: Checkout formunda "First Name" alanı için karakter sınırı (maxlength) tanımlanmaması.
+
+Modül: Ödeme / Checkout Akışı
+
+Öncelik (Priority): Low (P3)
+
+Ciddiyet (Severity): Minor (UI/UX ve Veri Tutarlılığı)
+
+TC: TC-0046-Karakter ve Tip Denetimi-First Name
+
+![Screenshot](bug-screenshots/bug-014-ss-001.png)
+
+1. Özet: Checkout sayfasındaki "First Name" input alanında herhangi bir karakter sınırlaması bulunmamaktadır. Kullanıcı, makul olmayan uzunlukta veri girişi yapabilmektedir.
+
+2. Yeniden Üretme Adımları:
+
+    2.1. standard_user ile giriş yapılıp Checkout sayfasına ilerlenir.
+
+    2.2. "First Name" alanına aşırı uzun (örn. 1000+ karakter) bir metin girilir.
+
+    2.3. Uygulamanın girişi durdurup durdurmadığı veya hata verip vermediği kontrol edilir.
+
+3. Beklenen Sonuç: maxlength özniteliğinin tanımlı olması veya sistemin kontrollü bir hata mesajı vermesi.
+
+4. Gerçekleşen Sonuç: maxlength tanımlanmadığı için sınırsız karakter girişi yapılabiliyor.
+
+5. Risk: Buffer overflow riskleri, veritabanı kayıt hataları ve sayfa düzeninin (UI) aşırı uzun metinler nedeniyle bozulması.
+
+
+# 15. Bug Report: BUG-015 - Missing Character Limit for "Last Name" Field
+
+Bulgu ID: BUG-015
+
+Bulgu Başlığı: Checkout formunda "Last Name" alanı için karakter sınırı (maxlength) tanımlanmaması.
+
+Modül: Ödeme / Checkout Akışı
+
+Öncelik (Priority): Low (P3)
+
+Ciddiyet (Severity): Minor (UI/UX ve Veri Tutarlılığı)
+
+TC: TC-0047-Karakter ve Tip Denetimi-Last Name
+
+![Screenshot](bug-screenshots/bug-015-ss-001.png)
+
+1. Özet: "Last Name" alanı için giriş denetimi eksiktir; alan her türlü uzunluktaki karakter dizisini kabul etmektedir.
+
+2. Yeniden Üretme Adımları:
+
+   2.1. standard_user ile giriş yapılıp Checkout sayfasına ilerlenir.
+
+   2.2. "Last Name" alanına çok uzun bir karakter dizisi girilir. (örn. 1000+ karakter)
+
+3. Beklenen Sonuç: Uygulamanın makul bir karakterde girişi durdurması.
+
+4. Gerçekleşen Sonuç: Herhangi bir kısıtlama olmaksızın sınırsız karakter girişi yapılabiliyor.
+
+5. Risk: Veri bütünlüğünün bozulması ve UI esnemesi.
+
+# 16. Bug Report: BUG-016 - Missing Character Limit for "ZIP / Postal Code" Field
+
+Bulgu ID: BUG-016
+
+Bulgu Başlığı: Checkout formunda "ZIP / Postal Code" alanı için karakter sınırı tanımlanmaması.
+
+Modül: Ödeme / Checkout Akışı
+
+Öncelik (Priority): Medium (P2)
+
+Ciddiyet (Severity): Minor (Format/Validasyon Eksikliği)
+
+TC: TC-0048-Karakter ve Tip Denetimi-ZIP / Postal Code
+
+![Screenshot](bug-screenshots/bug-016-ss-001.png)
+
+1. Özet: Posta kodu alanı, standart posta kodu formatlarının çok üzerinde veri girişine izin vermektedir.
+
+2. Yeniden Üretme Adımları:
+
+    2.1. standard_user ile giriş yapılıp Checkout sayfasına ilerlenir.
+
+    2.2. "ZIP / Postal Code" alanına sınırsız karakter girilir. (örn. 1000+ karakter)
+
+3. Beklenen Sonuç: Posta kodu standartlarına uygun bir karakter limiti (örn. 5-10 karakter) uygulanması.
+
+4. Gerçekleşen Sonuç: maxlength tanımlanmadığı için sınır gözetmeksizin giriş yapılabiliyor.
+
+5. Risk: Hatalı adres verilerinin sisteme kaydedilmesi ve lojistik süreçlerde yaşanabilecek aksaklıklar.
