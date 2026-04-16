@@ -29,7 +29,7 @@ Bu proje kapsamındaki tüm test sonuçları otomatik olarak GitHub Pages üzeri
 # 🎯 Temel Yetkinlik (Key Achievements)
 
 1. Multi-Browser Coverage: Testlerin Chrome, Firefox ve Edge üzerinde paralel koşumu.
-2. Accessibility First: WCAG 2.1 AA standartlarının otomasyona entegrasyonu.
+2. Accessibility First: WCAG 2.1 AA standartlarının entegrasyonu.
 3. Resilience Engineering: Performans testleriyle sistemin "Breaking Point" analizi ve Self-healing kapasitesinin ölçümü.
 4. CI/CD Maturity: GitHub Actions üzerinden her push sonrası otomatik kalite kontrolü ve artifact yönetimi.
 5. Cloud Testing: Gerçek cihazlar üzerinde bulut tabanlı test yürütme yetkinliği.
