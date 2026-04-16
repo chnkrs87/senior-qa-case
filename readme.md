@@ -62,22 +62,22 @@ Bu proje; Web, API, Mobil ve Performans katmanlarında en güncel QA araç setle
 
 A. Web & Mobil Test (UI Layer)
 
-•	Framework: WebdriverIO (v8) & Playwright.
-•	BrowserStack (Cloud Device Farm): * Gerçek iOS ve Android cihazlara erişim için browserstack.com hesabı gereklidir.
-•	Local Testing: Mobil tarayıcıları yerel ağda test etmek için BrowserStack Local binary yüklü olmalıdır.
-•	Axe-Core: Erişilebilirlik taramaları için WDIO entegrasyonu.
+    1. Framework: WebdriverIO (v8) & Playwright.
+    2. BrowserStack (Cloud Device Farm): * Gerçek iOS ve Android cihazlara erişim için browserstack.com hesabı gereklidir.
+    3. Local Testing: Mobil tarayıcıları yerel ağda test etmek için BrowserStack Local binary yüklü olmalıdır.
+    4. Axe-Core: Erişilebilirlik taramaları için WDIO entegrasyonu.
 
 B. API Test Katmanı
 
-•	Postman (Desktop App): Koleksiyonların manuel testi ve düzenlenmesi için.
-•	Newman (CLI): Postman koleksiyonlarını terminal üzerinden (CI/CD uyumlu) çalıştırmak için.
-•	Restful-Booker API: Testlerin koşturulduğu hedef platform (https://restful-booker.herokuapp.com)
+    1. Postman (Desktop App): Koleksiyonların manuel testi ve düzenlenmesi için.
+    2. Newman (CLI): Postman koleksiyonlarını terminal üzerinden (CI/CD uyumlu) çalıştırmak için.
+    3. Restful-Booker API: Testlerin koşturulduğu hedef platform (https://restful-booker.herokuapp.com)
 
 C. Performans Test Katmanı
 
-•	k6 (by Grafana): Yüksek performanslı yük testleri için Go tabanlı CLI aracı.
-•	Kurulum (Windows): winget install k6
-•	Kurulum (Mac): brew install k6
+    1. k6 (by Grafana): Yüksek performanslı yük testleri için Go tabanlı CLI aracı.
+    2. Kurulum (Windows): winget install k6
+    3. Kurulum (Mac): brew install k6
 
 3. Adım Adım Kurulum (Step-by-Step Setup)
 
@@ -110,7 +110,46 @@ C. Performans Test Katmanı
 
 4. Adım: Allure Raporlama Sistemini Aktif Etme
 
-Raporların görselleştirilmesi için Allure komut satırı aracının sistemde global olarak tanımlanması önerilir:
+    Raporların görselleştirilmesi için Allure komut satırı aracının sistemde global olarak tanımlanması önerilir:
+    Bash
+    npm install -g allure-commandline
+
+D. 🎭 Playwright Automation Suite (E2E & CI/CD)
+
+Bu proje, modern web uygulamaları için hız ve kararlılık odaklı, Playwright & TypeScript tabanlı bir uçtan uca (E2E) otomasyon altyapısıdır. 
+Sadece test koşumu değil, tam entegre bir QA Pipeline deneyimi sunarak yazılım kalitesini garanti altına alır.
+
+🚀 Teknik Mimari & Öne Çıkanlar
+
+    1. Cross-Browser Testing: Chromium ve Firefox üzerinde izole ve eşzamanlı test koşumu.
+    2. Modern Mimari: Sürdürülebilir ve modüler Page Object Model (POM) ile DRY prensiplerine uygun kod yapısı.
+    3. Smart Waiting: Playwright’ın Auto-wait özelliği ile flaky (istikrarsız) testlerin minimize edilmesi.
+    4. Custom Reporting: Her adım için hiyerarşik isimlendirilmiş Screenshot Engine ve görsel kanıt sistemi.
+
+⚙️ CI/CD & Otomasyon Süreci
+
+Proje, her kod değişikliğinde otomatik çalışan bir Quality Gate yapısına sahiptir
+
+    Aşama	        İşlem	                                                    Araç / Ortam
+    Trigger	        main branch'e yapılan her push ile tetiklenme	            GitHub Actions
+    Environment	    Node.js 24 & Linux tabanlı izole çalışma ortamı	            Ubuntu Runner
+    Execution	    Bağımlılıkların yüklenmesi ve Headless test koşumu	        Playwright Engine
+    Artifacts	    Başarılı/Hatalı tüm test ekran görüntülerinin arşivlenmesi	GitHub Artifacts
+
+🛠️ Hızlı Başlangıç
+
 Bash
-npm install -g allure-commandline
+# Bağımlılıkları kurun
+cd automation && npm install
+
+# Tarayıcı motorlarını yükleyin
+npx playwright install --with-deps
+
+# Testleri çalıştırın
+
+npx playwright test
+
+💡 Neden Bu Altyapı?
+Bu suite; Browser Context mimarisi sayesinde saniyeler içinde profil oluşturarak hızı artırır, 
+Trace Viewer desteği ile hata giderme süresini (MTTR) düşürür ve karmaşık DOM yapılarına (Shadow DOM, Iframe) yerleşik destek sunar.
 
