@@ -106,11 +106,13 @@
 
 #### ⚠️ Senaryo 7: Network Interruption (Ağ Kesintisi) Hakkında Teknik Not ####
 
-Projenin 7. senaryosu olan "İnternet kesildiğinde uygulamanın davranışı" testi, BrowserStack (Real Device Cloud) altyapısının teknik kısıtlamaları nedeniyle otomatize edilememiştir. Bunun nedenleri aşağıda teknik detaylarıyla açıklanmıştır:
+Projenin 7. senaryosu olan "İnternet kesildiğinde uygulamanın davranışı" testi, BrowserStack (Real Device Cloud) altyapısının teknik kısıtlamaları nedeniyle otomatize edilememiştir.
+
+Bunun nedenleri aşağıda teknik detaylarıyla açıklanmıştır:
 
 1. WebDriver Bağlantı Mimarisi (Protocol Dependency)
 
-Bulut tabanlı test platformlarında (BrowserStack, SauceLabs vb.), test kodumuz ile gerçek cihaz arasındaki iletişim WebDriver protokolü üzerinden sağlanır.
+    Bulut tabanlı test platformlarında (BrowserStack, SauceLabs vb.), test kodumuz ile gerçek cihaz arasındaki iletişim WebDriver protokolü üzerinden sağlanır.
 
     Cihazın internet bağlantısı (uçak modu veya network simülasyonu ile) tamamen kesildiğinde, cihazın Appium/WebDriver sunucusuyla olan bağı da kopmaktadır.
 
@@ -118,7 +120,7 @@ Bulut tabanlı test platformlarında (BrowserStack, SauceLabs vb.), test kodumuz
 
 2. CDP (Chrome DevTools Protocol) Kısıtları
 
-Local ortamlarda setNetworkConditions gibi komutlarla tarayıcıyı "Offline" moduna sokmak mümkündür. Ancak gerçek mobil cihazlarda (iOS Safari ve Android Chrome):
+    Local ortamlarda setNetworkConditions gibi komutlarla tarayıcıyı "Offline" moduna sokmak mümkündür. Ancak gerçek mobil cihazlarda (iOS Safari ve Android Chrome):
 
     iOS Safari: Apple'ın güvenlik duvarı ve WebDriver limitleri nedeniyle tarayıcı düzeyinde bir network manipülasyonuna izin vermemektedir.
 
