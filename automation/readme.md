@@ -15,7 +15,7 @@ Proje, sadece test koşumu değil, tam entegre bir QA Pipeline deneyimi sunar.
 
 # 📊 Test Dashboard & Reports
 
-📱 **Automation** | Playwright Mobile | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
+📱 **Automation** | Playwright | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
 
 🛠️ Kurulum ve Çalıştırma
 
