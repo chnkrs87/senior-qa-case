@@ -22,7 +22,7 @@ Bu proje kapsamındaki tüm test sonuçları otomatik olarak GitHub Pages üzeri
 
 🌐 **Web Test (Cross-browser & Responsive)** | Playwright | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/web/)
 
-📱 **Automation** | Playwright Mobile | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
+📱 **Automation** | Playwright | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/automation/)
 
 ⚡ **Performance** | K6 Load Testing | [Raporu Görüntüle](https://chnkrs87.github.io/senior-qa-case/performance/)
 
