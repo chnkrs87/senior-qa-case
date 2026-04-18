@@ -15,7 +15,7 @@ Mobil web deneyimini (Mobile Web vs. Native) optimize etmek için gerçek cihazl
 
 🛠️ Kullanılan Araçlar ve Versiyonlar
 
-    Device 1#: İphone 14 / Os: 16
+    Device 1#: Iphone 14 / Os: 16
     
     Device 2#: Samsung Galaxy S23 / Os: Android: 13
     
